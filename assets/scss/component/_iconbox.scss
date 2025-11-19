@@ -1,0 +1,168 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  2.19 IconBox
+/*----------------------------------------*/
+
+.social-area{
+    & a{
+        display: inline-block;
+        background: var(--vkl-bg-bg-2);
+        height: 40px;
+        width: 40px;
+        line-height: 40px;
+        text-align: center;
+        border-radius: 50px;
+        color: var(--vkl-text-text-black);
+        transition: .3s;
+        margin-right: 6px;
+        &:hover{
+            background: var(--vkl-text-text-1);
+            transition: .3s;
+        }
+    }
+}
+
+// vkl check icon box   
+
+.vkl-check-iconbox{
+    & ul{
+        & li{
+            font-size: var(--vkl-font-size-font-s18);
+            line-height: var(--vkl-specing-height18);
+            font-weight: var(--vkl-weight-semibold);
+            display: inline-block;
+            margin-right: 30px;
+            & span{
+                height: 22px;
+                width: 22px;
+                display: inline-block;
+                margin-right: 6px; 
+                background: var(--vkl-text-text-2);
+                border-radius: 50px;
+                line-height: 22px;
+                text-align: center;
+                & img{
+                    margin-top: -4px;
+                }
+            }
+        }
+    }
+}
+
+
+// footer icon list
+.vl-icon-list{
+    & ul{
+        & li{
+            & a{
+                color: var(--vkl-text-text-3);
+                font-size: var(--vkl-font-size-font-s18);
+                font-weight: var(--vkl-weight-medium);
+                line-height: var(--vkl-specing-height18);
+                transition: .3s;
+
+                &:hover{
+                    color: var(--vkl-text-text-1);
+                    transition: .3s;
+                    margin-left: 4px;
+                }
+            }
+            margin-bottom: 20px;
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+
+// contact iconbox 
+
+.vkl-single-iconbox{
+    border: 1px solid #DCE2DD;
+    border-radius: 8px;
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    & .icon{
+        & span{
+            height: 80px;
+            width: 80px;
+            line-height: 80px;
+            text-align: center;
+            border-radius: 50px;
+            display: inline-block;
+            transition: .3s;
+            background: var(--vkl-text-text-2);
+            margin-right: 16px;
+        }
+    }
+    & .content{
+        & .title{
+            font-size: var(--vkl-font-size-font-s24);
+            line-height: var(--vkl-specing-height24);
+        }
+        & .para{
+            display: inline-block;
+            font-size: var(--vkl-font-size-font-s16);
+            transition: .3s;
+            &:hover{
+                color: var(--vkl-text-text-2);
+                transition: .3s;
+            }
+        }
+    }
+    &:hover{
+        & .icon{
+            & span{
+                transition: .3s;
+                transform: rotateY(-180deg);
+            }
+        }
+    }
+}
+
+
+
+.time-section {
+  padding: 40px 0;
+  background: #f5fdf7;
+  display: flex;
+  justify-content: center;
+}
+
+.vkl-shedul-table {
+    border: 1px solid #DCE2DD;
+    border-radius: 8px;
+    width: 550px;
+    border-collapse: collapse;
+}
+
+
+
+.vkl-shedul-table thead th {
+  background: #e7f1e8;
+  padding: 20px;
+  text-align: left;
+  font-family: var(--vkl-family-font1);
+  font-weight: var(--vkl-weight-regular);
+  color: var(--vkl-text-text-black);
+  font-size: var(--vkl-font-size-font-s24);
+  line-height: var(--vkl-specing-height24);
+  border-right: 1px solid #DCE2DD;
+}
+
+.vkl-shedul-table td {
+  padding: 20px;
+  border-bottom: 1px solid #DCE2DD;
+  color: var(--vkl-text-text-black);
+  font-size: var(--vkl-font-size-font-s18);
+  line-height: var(--vkl-specing-height18);
+  font-weight: var(--vkl-weight-medium);
+  border-right: 1px solid #DCE2DD;
+}
+
+.vkl-shedul-table tbody tr:last-child td {
+  border-bottom: none;
+}

@@ -1,0 +1,97 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  2.19 IconBox
+/*----------------------------------------*/
+
+.social-area{
+    & a{
+        display: inline-block;
+        background: #2B7DCF;
+        height: 40px;
+        width: 40px;
+        line-height: 40px;
+        text-align: center;
+        border-radius: 50px;
+        color: var(--vkl-text-text-white);
+        transition: .3s;
+        margin-left: 6px;
+        &:hover{
+            background: var(--vkl-text-text-black);
+            transition: .3s;
+            color: var(--vkl-text-text-white);
+        }
+    }
+    &-header{
+        text-align: right;
+    }
+    &-footer{
+        & a{
+            background: var(--vkl-text-text-white);
+            color: var(--vkl-text-text-black);
+            margin-left: 0;
+            margin-right: 12px;
+        }
+    }
+}
+
+// footer icon list
+.vl-icon-list{
+    & ul{
+        & li{
+            & a{
+                color: var(--vkl-text-text-black);
+                font-size: var(--vkl-font-size-font-s18);
+                font-weight: var(--vkl-weight-medium);
+                line-height: var(--vkl-specing-height18);
+                transition: .3s;
+            }
+            margin-bottom: 20px;
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.vl-checklist-grid{
+    & ul{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 16px;
+        @media #{$xs}{
+            grid-template-columns: repeat(1,1fr);
+        }
+        & li{
+            background: var(--vkl-bg-bg-3);
+            border-radius: 90px;
+            transition: .3s;
+            padding: 16px 42px 16px 16px;
+            font-size: var(--vkl-font-size-font-s18);
+            line-height: var(--vkl-specing-height16);
+            color: var(--vkl-text-text-black);
+            @media #{$lg}{
+                font-size: 15px;
+                padding: 10px;
+            }
+            & span{
+                background: var(--vkl-text-text-black);
+                height: 20px;
+                width: 20px;
+                line-height: 20px;
+                text-align: center;
+                border-radius: 50px;
+                display: inline-block;
+                color: var(--vkl-text-text-white);
+                margin-right: 4px;
+                & img{
+                    margin-top: -4px;
+                }
+            }
+            &:hover{
+                transform: translateY(-2px);
+                transition: .3s;
+            }
+        }
+    }
+}

@@ -1,0 +1,147 @@
+@use '../../utils' as *;
+
+
+/*----------------------------------------*/
+/*  7.12 Work css
+/*----------------------------------------*/
+
+.vl-work {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.single-work-box{
+    border-radius: 16px;
+    padding: 48px 32px;
+    border: 1px solid rgba(14, 8, 43, 0.10);
+    background: var(--vkl-text-text-white);
+    transition: .3s;
+    & .num-icon{
+        & span{
+            background: var(--vkl-bg-bg-3);
+            color: var(--vkl-text-text-black);
+            font-size: var(--vkl-font-size-font-s32);
+            line-height: var(--vkl-specing-height32);
+            font-weight: var(--vkl-weight-semibold);
+            transition: .3s;
+            display: inline-block;
+            border-radius: 16px;
+            padding: 24px;
+        }
+    }
+    & .work-content{
+       & .title{
+            font-size: var(--vkl-font-size-font-s24);
+            line-height: var(--vkl-specing-height24);
+            color: var(--vkl-text-text-black);
+            font-weight: var(--vkl-weight-semibold);
+            transition: .3s;
+            padding-top: 80px;
+       } 
+       & .para{
+            font-size: var(--vkl-font-size-font-s18);
+            line-height: var(--vkl-specing-height26);
+            color: var(--vkl-text-text-1);
+            font-weight: var(--vkl-weight-regular);
+            padding-top: 16px;
+            transition: .3s;
+       }
+    }
+    &:hover{
+        & .num-icon{
+            & span{
+                transform: rotateY(-180deg);
+            }
+        }
+    }
+}
+
+
+
+// test
+
+.vl-testimoial-content {
+    position: sticky;
+    top: 100px;
+}
+
+.card__wrap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 1750px;
+  align-items: center;
+}
+
+.cardd {
+    border-radius: 32px;
+    position: sticky;
+    font-weight: medium;
+}
+.one {
+  top: 50px;
+}
+.two {
+  top: 80px;
+}
+.three {
+  top: 110px;
+}
+.four {
+  top: 140px;
+}
+
+// work style 2 
+
+.vl-work-box2{
+  background: rgba(255, 255, 255, 0.10);
+  border:1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 8px;
+  padding: 32px;
+  transition: .3s;
+  overflow: hidden;
+  & .vl-number{
+    & span{
+      color: var(--vkl-text-text-white);
+      font-size: 110px;
+      font-style: normal;
+      font-weight: var(--vkl-weight-semibold);
+      line-height: 99px;
+      letter-spacing: -1.1px;
+      transition: .3s;
+      transform: translateX(-69px);
+      position: relative;
+      display: inline-block;
+    }
+  }
+  & .vl-content{
+    & .title{
+      padding-top: 32px;
+      color: var(--vkl-text-text-white);
+      font-size: var(--vkl-font-size-font-s20);
+      font-style: normal;
+      font-weight: var(--vkl-weight-semibold);
+      line-height: var(--vkl-specing-height20);
+    }
+    & .para{
+      padding-top: 16px;
+      color: rgba(255, 255, 255, 0.80);
+      font-size:var(--vkl-font-size-font-s18);
+      font-style: normal;
+      font-weight: var(--vkl-weight-regular);
+      line-height: var(--vkl-specing-height26);
+    }
+  }
+  &:hover{
+    border: 1px solid var(--vkl-text-text-white);
+    transition: .3s;
+    transform: translateY(-3px);
+    & .vl-number{
+      & span{
+        transition: .3s;
+        transform: translateX(0px);
+      }
+    }
+  }
+}

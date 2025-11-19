@@ -1,0 +1,146 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  2.3 Buttons
+/*----------------------------------------*/
+
+// header primary btn one
+.vkl-primary-btn{
+    background: var(--vkl-text-text-1);
+    display: inline-block;
+    border-radius: 8px;
+    padding: 17px 20px;
+    color: var(--vkl-text-text-black);
+    font-size: var(--vkl-font-size-font-s18);
+    line-height: var(--vkl-specing-height18);
+    font-weight: var(--vkl-weight-semibold);
+    transition: .3s;
+    position: relative;
+    z-index: 1;
+    @media #{$xl}{
+        padding: 19px 23px;
+    }
+    &:after{
+        position: absolute;
+        content: "";
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background: var(--vkl-text-text-black);
+        border-radius: 8px;
+        z-index: -1;
+        transition: .3s;
+        transform: scaleX(0);
+    }
+    &.mr-24{
+        @media #{$xs}{
+            margin-right: 0;
+        }
+    }
+    &:hover{
+        color: var(--vkl-text-text-white);
+        transition: .3s;
+        transform: translateY(-3px);
+        &::after{
+            transform: scaleX(1);
+            transition: .3s;
+        }
+    }
+}
+
+.vl-header-btn{
+    text-align: right;
+}
+
+.vkl-hero-wrap{
+    & .vkl-primary-btn{
+        @media #{$xs}{
+            margin-bottom: 20px;
+        }
+        &:hover{
+            color: var(--vkl-text-text-2);
+        }
+        &::after{
+            background: var(--vkl-text-text-white);
+        }
+        &.vkl-secondary-btn{
+            background: var(--vkl-text-text-2);
+            color: var(--vkl-text-text-white);
+            &:hover{
+                color: var(--vkl-text-text-black);
+            }
+        }
+    }
+    
+}
+
+
+
+
+
+
+// old btn
+.vl-btn{
+    background: var(--vkl-text-text-1);
+    padding: 16px 45px;
+    font-size: 18px;
+    border-radius: 8px;
+    display: inline-block;
+    color: var(--vkl-text-text-white);
+    position: relative;
+    overflow: hidden; 
+    &:hover{
+        & .vl-btn-y-1{
+            transform: translateY(-100%);
+        }
+        & .vl-btn-y-2{
+            transform: translateY(0);
+        }
+        color: var(--vkl-text-text-white);
+    }
+    &-sec{ 
+        background: var(--vkl-text-text-1);
+        padding: 16px 24px;
+        font-size: 18px;
+        border-radius: 8px;
+        display: inline-block;
+        position: relative;
+        &:hover{
+            & .vl-btn-y-1{
+                transform: translateY(-100%);
+            }
+            & .vl-btn-y-2{
+                transform: translateY(0);
+            }
+        }
+    }
+        &:hover{
+            background: var(--vl-theme-color);
+            color: var(--vkl-text-text-white);
+            border-color: var(--vl-theme-color);
+            opacity: 1;
+        }
+
+    &-wrap{
+        position: relative;
+        overflow: hidden;
+        display: block;
+        color: var(--vkl-text-text-white);
+        font-weight: var(--vkl-weight-ex-bold);
+        text-transform: uppercase;
+        & span{
+            transition: .3s;
+            display: block;
+        }
+    }
+   
+    &-y-2{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        transform: translateY(100%);
+    }
+
+}

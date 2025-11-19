@@ -1,0 +1,236 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  2.3 Buttons
+/*----------------------------------------*/
+
+// header primary btn one
+.vkl-primary-btn{
+    background: var(--vkl-text-text-black);
+    display: inline-block;
+    border-radius: 50px;
+    padding: 16px 24px;
+    color: var(--vkl-text-text-white);
+    font-size: var(--vkl-font-size-font-s18);
+    line-height: var(--vkl-specing-height18);
+    font-weight: var(--vkl-weight-semibold);
+    transition: .3s;
+    position: relative;
+    z-index: 1;
+    @media #{$xl}{
+        padding: 19px 23px;
+    }
+    &:after{
+        position: absolute;
+        content: "";
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background: var(--vkl-bg-bg-2);
+        border-radius: 50px;
+        z-index: -1;
+        transition: .3s;
+        transform: scaleX(0);
+    }
+    &:hover{
+        color: var(--vkl-text-text-white);
+        transition: .3s;
+        &::after{
+            transform: scaleX(1);
+            transition: .3s;
+        }
+    }
+}
+
+.vl-header-btn{
+    text-align: right;
+}
+
+.vl-btn-primary{
+    background: var(--vkl-text-text-black);
+    color: var(--vkl-text-text-white);
+    font-size: var(--vkl-font-size-font-s20);
+    line-height: var(--vkl-specing-height20);
+    font-weight: var(--vkl-weight-semibold);
+    padding: 16px 24px;
+    border-radius: 50px;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    overflow: hidden;
+    transition: .3s;
+    & span{
+        display: inline-block;
+        transition: .3s;
+    }
+    span.arrow1 {
+        transition: 0.3s;
+        position: absolute;
+        transform: translateX(-40px);
+        opacity: 0;
+    }
+    span.arrow2 {
+         padding-left: 4px;
+         transition: .3s;
+    }
+    &:hover{
+        color: var(--vkl-text-text-white);
+        transition: .3s;
+        transform: translateY(-3px);
+        span.arrow1 {
+            transition: 0.3s;
+            transform: translateX(0px);
+            opacity: 1;
+            rotate: (-45deg);
+            padding-left: 4px;
+        }
+        span.arrow2 {
+            transition: 0.3s;
+            transform: translateX(40px);
+            opacity:0;
+            rotate: (-45deg);
+        }
+        & span{
+             transition: .3s;
+        }
+    }
+    &.vl-btn-secondary{
+        padding: 14px 24px;
+        background: transparent;
+        color: var(--vkl-text-text-black);
+        border: 1px solid var(--vkl-text-text-black);
+    }
+}
+
+.vl-thumb-btn{
+    & .vl-btn-primary{
+        color: var(--vkl-text-text-white) !important;
+    }
+}
+
+// primary btn 2 
+
+
+.vl-primary-btn2 {
+    background: var(--vkl-text-text-5);
+    padding: 16px 24px;
+    display: inline-block;
+    border-radius: 8px;
+    color: var(--vkl-text-text-white);
+    font-size: var(--vkl-font-size-font-s20);
+    line-height: var(--vkl-specing-height20);
+    font-weight: var(--vkl-weight-semibold);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: .3s;
+    &::after {
+        position: absolute;
+        content: "";
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background: var(--vkl-text-text-black);
+        z-index: -1;
+        transform: scaleX(0);
+        transition: .3s;
+    }
+    &.blog-btn-2{
+        background: transparent;
+        color: var(--vkl-text-text-4);
+        border: 1px solid var(--vkl-text-text-4);
+        & span{
+            display: inline-block;
+            transition: .3s;
+        }
+        &::after{
+            background: var(--vkl-text-text-5);
+        }
+    }
+    &:hover{
+        transition: .3s;
+        color: var(--vkl-text-text-white);
+        transform: translateY(-3px);
+        &::after{
+            transform: scaleX(1);
+            transition: .3s;
+        }
+        &.blog-btn-2{
+            border: 1px solid var(--vkl-text-text-5);
+            & span{
+                transform: rotate(-45deg);
+                transition: .3s;
+            }
+        }
+    }
+}
+
+
+
+
+// old btn
+.vl-btn{
+    background: var(--vkl-text-text-1);
+    padding: 16px 45px;
+    font-size: 18px;
+    border-radius: 8px;
+    display: inline-block;
+    color: var(--vkl-text-text-white);
+    position: relative;
+    overflow: hidden; 
+    &:hover{
+        & .vl-btn-y-1{
+            transform: translateY(-100%);
+        }
+        & .vl-btn-y-2{
+            transform: translateY(0);
+        }
+        color: var(--vkl-text-text-white);
+    }
+    &-sec{ 
+        background: var(--vkl-text-text-1);
+        padding: 16px 24px !important;
+        font-size: 18px;
+        border-radius: 8px;
+        display: inline-block;
+        position: relative;
+        &:hover{
+            & .vl-btn-y-1{
+                transform: translateY(-100%);
+            }
+            & .vl-btn-y-2{
+                transform: translateY(0);
+            }
+        }
+    }
+        &:hover{
+            background: var(--vl-theme-color);
+            color: var(--vkl-text-text-white);
+            border-color: var(--vl-theme-color);
+            opacity: 1;
+        }
+
+    &-wrap{
+        position: relative;
+        overflow: hidden;
+        display: block;
+        color: var(--vkl-text-text-white);
+        font-weight: var(--vkl-weight-ex-bold);
+        text-transform: uppercase;
+        & span{
+            transition: .3s;
+            display: block;
+        }
+    }
+   
+    &-y-2{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        transform: translateY(100%);
+    }
+
+}

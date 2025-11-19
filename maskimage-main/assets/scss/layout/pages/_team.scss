@@ -1,0 +1,134 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.7 Team css
+/*----------------------------------------*/
+
+.team-grid-wrap{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 30px;
+    @media #{$lg,$md}{
+        grid-template-columns: repeat(2,1fr);
+    }
+    @media #{$xs}{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+.vl-team-member-wrap{
+    position: relative;
+    z-index: 1;
+}
+
+.vl-single-team{
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    & .vl-team-thumb{
+        margin-bottom: 48px;
+        & img{
+            height: 234px;
+            width: 234px;
+            border-radius: 50%;
+            object-fit: cover;
+            height: 234px;
+            overflow: hidden;
+            transition: .3s;
+        }
+    }
+}
+
+
+.vl-team-social{
+    position: absolute;
+    bottom: -17px;
+    left: 0;
+    right: 0;
+    & a{
+        margin: 0 5px;
+        background: var(--vkl-bg-bg-3);
+        height: 44px;
+        width: 44px;
+        line-height: 44px;
+        display: inline-block;
+        border-radius: 50px;
+        transition: all 0.3s ease;
+        &:hover{
+            transition: all 0.3s ease;
+            background: var(--vkl-text-text-black);
+            color: var(--vkl-text-text-white);
+        }
+        &.active{
+            background: var(--vkl-text-text-black);
+            z-index: 99;
+            position: relative;
+        }
+    }
+}
+
+.team-circle-shape {
+    position: absolute;
+    top: -18px;
+    left: 0;
+    right: 0;
+    transition: .3s;
+    z-index: -1;
+}
+
+.vl-team-social{
+    a:nth-child(1) {
+        transform: translateX(116px);
+        transition: .3s;
+    }
+    a:nth-child(2) {
+        transform: translateX(58px);
+    }
+    a:nth-child(4) {
+        transform: translateX(-58px);
+    }
+    a:nth-child(5) {
+        transform: translateX(-116px);
+    }
+}
+
+.vl-single-team:hover{
+    & .team-circle-shape {
+        transform: rotate(90deg);
+        transition: .3s;
+    }
+    .vl-team-social a:nth-child(1) {
+        transform: translateY(-60px) translateX(17px);
+        transition: .3s;
+    }
+    .vl-team-social a:nth-child(2) {
+        transform: translateY(-18px);
+    }
+    .vl-team-social a:nth-child(4) {
+        transform: translateY(-18px);
+    }
+    .vl-team-social a:nth-child(5) {
+        transform: translateY(-58px) translateX(0px);
+    }
+}
+
+.vl-team-contentt{
+    & .title{
+        color: var(--vkl-text-text-black);
+        font-size: var(--vkl-font-size-font-s24);
+        line-height: var(--vkl-specing-height24);
+        font-weight: var(--vkl-weight-semibold);
+        transition: .3s;
+        
+    }
+    & .position{
+        display: inline-block;
+        padding-top: 16px;
+        color: var(--vkl-text-text-1);
+        font-size: var(--vkl-font-size-font-s18);
+        line-height: var(--vkl-specing-height18);
+        font-weight: var(--vkl-weight-regular);
+        transition: .3s;
+    }
+}
+
