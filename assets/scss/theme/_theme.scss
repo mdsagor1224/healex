@@ -279,14 +279,14 @@ textarea{
 	color: var(--vkl-text-text-2);
 	padding-left: 16px;
 	padding-right: 16px;
-	border: 1px solid #E0E2E3;
+	border: 1px solid #CFD8D2;
 
 	// @include vkl-placeholder{
 	// 	color: #95999D;
 	// }
 
 	&:focus{
-		border: 1px solid #E0E2E3;
+		border: 1px solid #CFD8D2;
 		&::placeholder{
 			opacity: 0;
 			font-size: var(--vkl-font-size-font-s18);

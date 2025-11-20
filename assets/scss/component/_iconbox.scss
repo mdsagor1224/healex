@@ -137,6 +137,9 @@
     border-radius: 8px;
     width: 550px;
     border-collapse: collapse;
+    @media #{$lg,$md,$xs}{
+        width: 100%;
+    }
 }
 
 

@@ -62,6 +62,18 @@ p{
 	background-repeat: no-repeat;
 }
 
+// swiper slider transition effect 
+.vl-slide-transtion {
+	-webkit-transition-timing-function: linear;
+	transition-timing-function: linear;
+}
+.vl-brand-slide-element {
+	width: auto;
+	display: inline-block;
+}
+
+
+
 // backgound common color
 .vkl-text-black{
 	background: var(--vkl-text-text-black);

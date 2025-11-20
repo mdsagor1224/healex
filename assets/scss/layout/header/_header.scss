@@ -232,10 +232,6 @@
     visibility: hidden;
     transition: .3s;
     border-radius: 8px;
-    @media #{$lg}{
-        left: -162px;
-        width: 929px;
-    }
 
     @media #{$lg,$md,$xs}{
         width: auto;

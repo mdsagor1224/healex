@@ -91,6 +91,14 @@
 		once: true,
 	});
 
+	/* ================================
+       Nice Select Js Start
+    ================================ */
+
+    if ($('.single-select').length) {
+        $('.single-select').niceSelect();
+    }
+
 
 	/* ================================
         Jarallax

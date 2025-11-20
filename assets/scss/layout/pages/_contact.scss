@@ -7,6 +7,10 @@
 .vkl-contact-bg-wrap{
     margin-left: 85px;
     margin-right: 85px;
+    @media #{$lg,$md,$xs}{
+       margin-left: 0;
+       margin-right: 0;
+    }
 }
 
 .vkl-contact-wrap {
@@ -21,4 +25,71 @@
     padding-bottom: 32px;
     margin-bottom: 32px;
     border-bottom: 1px solid #DCE2DD;
+}
+
+.vkl-contact-form-wrap{
+    padding: 32px;
+    & .vkl-contact-title{
+        line-height: var(--vkl-specing-height24);
+    }
+    & .desc{
+        color: var(--vkl-text-text-3);
+        line-height: var(--vkl-specing-height26);
+        font-weight: var(--vkl-weight-medium);
+        padding-top: 16px;
+        padding-bottom: 32px;
+    }
+}
+
+
+.vl-form-wrap{
+    & input, & textarea{
+        border: 1px solid var(--vkl-border-border-4);
+        border-radius: 8px;
+        color: var(--vkl-text-text-3);
+        font-size: var(--vkl-font-size-font-s18);
+        line-height: var(--vkl-specing-height18);
+        font-weight: var(--vkl-weight-medium);
+        background: transparent;
+        height: 54px;
+        width: 100%;
+        padding: 10px;
+        &::placeholder{
+            color: var(--vkl-text-text-3);
+            font-size: var(--vkl-font-size-font-s18);
+            line-height: var(--vkl-specing-height18);
+            font-weight: var(--vkl-weight-medium);
+        }
+    }
+    & textarea{
+        height: 150px;
+    }
+}
+
+.form-clt{
+    .nice-select.single-select{
+        background: transparent;
+        border: 1px solid var(--vkl-border-border-4);
+        border-radius: 8px;
+        height: 54px;
+        line-height: 54px;
+        font-size: 18px;
+    }
+    ul.list {
+        width: 100%;
+    }
+    .nice-select:after {
+        border-bottom: 2px solid var(--vkl-text-text-3);
+        border-right: 2px solid var(--vkl-text-text-3);
+        content: '';
+        height: 8px;
+        width: 8px;
+    }
+}
+
+input[type="date"]:focus-visible,
+input[type="date"]:focus {
+    outline: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
 }

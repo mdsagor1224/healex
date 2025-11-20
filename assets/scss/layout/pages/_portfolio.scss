@@ -4,6 +4,27 @@
 /*  7.12 Profile css
 /*----------------------------------------*/
 
+.vkl-work-wrap {
+    margin-left: 25px;
+    @media #{$lg,$md,$xs}{
+        margin-left: 0;
+    }
+}
+
+.vkl-work-item-thumb img.vl-anim-img {
+    height: 832px;
+    object-fit: cover; 
+    @media #{$xs}{
+        height: 100%;
+    }
+}
+.vkl-work-item-thumb {
+    margin-right: 20px;
+    @media #{$lg,$md,$xs}{
+        margin-right: 0;
+    }
+}
+
 .vkl-work-item{
     border: 1px solid #2B412A;
     border-radius: 8px;
@@ -13,6 +34,9 @@
     position: relative;
     z-index: 1;
     overflow: hidden;
+    @media #{$xs}{
+        display: block;
+    }
     &::after{
         position: absolute;
         content: "";
@@ -39,6 +63,9 @@
                 filter: brightness(0) invert(1);
                 transition: .3s;
             }
+            @media #{$xs}{
+                margin-bottom: 16px;
+            }
         }
     }
     &-title{
@@ -46,9 +73,12 @@
         transition: .3s;
         font-size: var(--vkl-font-size-font-s24);
         line-height: var(--vkl-specing-height24);
+        @media #{$xs}{
+            line-height: var(--vkl-specing-height32);
+        }
     }
     &-desc{
-        color: #fff;
+        color: rgba(255, 255, 255, 0.90);
         transition: .3s;
         font-size: var(--vkl-font-size-font-s18);
         line-height: var(--vkl-specing-height26);
@@ -60,6 +90,31 @@
             transition: .3s;
             top: 0;
             bottom: auto;
+        }
+        & .vkl-work-item{
+            &-icon{
+                & span{
+                    transition: .3s;
+                    background: var(--vkl-text-text-1);
+                    transform: rotateY(-180deg);
+                    & img{
+                        filter: inherit;
+                        transition: .3s;
+                    }
+                }
+            }
+            &-title{
+                color: var(--vkl-text-text-black);
+                transition: .3s;
+                &:hover{
+                    color: var(--vkl-text-text-2);
+                    transition: .3s;
+                }
+            }
+            &-desc{
+                color: var(--vkl-text-text-3);
+                transition: .3s;
+            }
         }
     }
 }

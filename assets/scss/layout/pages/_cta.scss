@@ -1,1 +1,63 @@
 @use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.8 CTA css
+/*----------------------------------------*/
+
+.vkl-cta-area{
+    position: relative;
+    z-index: 1;
+    &::after{
+        position: absolute;
+        content: "";
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(92deg, rgba(19, 44, 18, 0.90) -7.66%, rgba(19, 44, 18, 0.00) 100.88%);
+    }
+}
+
+.vkl-cta-content{
+    position: relative;
+    z-index: 1;
+    margin-right:70px;
+    @media #{$lg,$md,$xs}{
+        margin-right: 0;
+    }
+    & .desc{
+        color: rgba(255, 255, 255, 0.90);
+        font-size: var(--vkl-font-size-font-s18);
+        line-height: var(--vkl-specing-height26);
+    }
+}
+
+.vkl-cta-from-area{
+    position: relative;
+    z-index: 1;
+    width: 495px;
+    @media #{$md,$xs}{
+        width: 100%;
+    }
+    & input{
+        background: var(--vkl-text-text-white);
+        border-radius: 8px;
+        color: var(--vkl-text-text-black);
+        font-size: var(--vkl-font-size-font-s18);
+        line-height: var(--vkl-specing-height18);
+        font-weight: var(--vkl-weight-medium);
+        height: 68px;
+        padding-right: 135px;
+        &::placeholder{
+            color: var(--vkl-text-text-black);
+            font-size: var(--vkl-font-size-font-s18);
+            line-height: var(--vkl-specing-height18);
+            font-weight: var(--vkl-weight-medium);
+        }
+    }
+    & .vkl-cta-form-btn{
+        position: absolute;
+        right: 8px;
+        top: 8px;
+    }
+}

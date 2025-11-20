@@ -28,7 +28,7 @@
             @media #{$xl}{
                 margin-left: 0px;
             }
-            @media #{$md,$xs}{
+            @media #{$lg,$md,$xs}{
                 margin-left: 0;
             }
         }
@@ -37,7 +37,7 @@
             @media #{$xl}{
                 margin-left: 0px;
             }
-            @media #{$md,$xs}{
+            @media #{$lg,$md,$xs}{
                 margin-left: 0;
             }
         }
@@ -47,7 +47,7 @@
             @media #{$xl}{
                 margin-left: 0px;
             }
-            @media #{$md,$xs}{
+            @media #{$lg,$md,$xs}{
                 margin-left: 0;
             }
             p{
@@ -71,7 +71,7 @@
                     display: block;
                     &:hover{
                         margin-left: 6px;
-                        color: var(--vkl-text-text-1);
+                        color: var(--vkl-text-text-2);
                         opacity: 1;
                         transition: .3s;
                     }

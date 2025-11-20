@@ -46,6 +46,14 @@
     margin-top: 80px;
 }
 
+
+.vl-test-slider-space {
+    margin-right: -445px;
+    @media #{$md,$xs}{
+        margin-right: 0;
+    }
+}
+
 // margin bottom
 .mb-60{
     @media #{$md,$xs}{
@@ -74,5 +82,11 @@
 .pb-70{
     @media #{$md,$xs}{
         padding-bottom: 20px;
+    }
+}
+
+.pb-100{
+    @media #{$md,$xs}{
+        padding-bottom: 50px;
     }
 }
