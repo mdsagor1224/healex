@@ -1,1 +1,65 @@
 @use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.12 Profile css
+/*----------------------------------------*/
+
+.vkl-work-item{
+    border: 1px solid #2B412A;
+    border-radius: 8px;
+    padding: 24px;
+    display: flex;
+    transition: .3s;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    &::after{
+        position: absolute;
+        content: "";
+        left: 0;
+        top: auto;
+        bottom: 0;
+        height: 0;
+        width: 100%;
+        background: var(--vkl-bg-bg-1);
+        transition: .3s;
+        z-index: -1;
+    }
+    &-icon{
+        & span{
+            height: 70px;
+            width: 70px;
+            display: grid;
+            place-content: center;
+            background: var(--vkl-text-text-2);
+            border-radius: 50px;
+            transition: .3s;
+            margin-right: 24px;
+            & img{
+                filter: brightness(0) invert(1);
+                transition: .3s;
+            }
+        }
+    }
+    &-title{
+        color: var(--vkl-text-text-white);
+        transition: .3s;
+        font-size: var(--vkl-font-size-font-s24);
+        line-height: var(--vkl-specing-height24);
+    }
+    &-desc{
+        color: #fff;
+        transition: .3s;
+        font-size: var(--vkl-font-size-font-s18);
+        line-height: var(--vkl-specing-height26);
+        padding-top: 16px;
+    }
+    &:hover{
+        &::after{
+            height: 100%;
+            transition: .3s;
+            top: 0;
+            bottom: auto;
+        }
+    }
+}

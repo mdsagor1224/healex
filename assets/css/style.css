@@ -79,7 +79,7 @@
 		7.1 Banner css
 		7.2 About css
 		7.3 Service css
-		7.4 Subscribe css
+		7.4 Team css
 		7.5 Instagram css
 		7.6 Testimonial css
 		7.7 Brand css
@@ -134,7 +134,7 @@
   --vkl-bg-bg-1: #E4EBE7;
   --vkl-bg-bg-2: #F2F6F4;
   --vkl-border-border-1: #E5E7EB;
-  --vkl-border-border-2: #dfdcdc;
+  --vkl-border-border-2: #D0D5D0;
   --vkl-font-size-font-s10: 10px;
   --vkl-font-size-font-s12: 12px;
   --vkl-font-size-font-s14: 14px;
@@ -5341,6 +5341,65 @@ p {
 }
 
 /*----------------------------------------*/
+/*  7.12 Profile css
+/*----------------------------------------*/
+.vkl-work-item {
+  border: 1px solid #2B412A;
+  border-radius: 8px;
+  padding: 24px;
+  display: flex;
+  transition: 0.3s;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+.vkl-work-item::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: auto;
+  bottom: 0;
+  height: 0;
+  width: 100%;
+  background: var(--vkl-bg-bg-1);
+  transition: 0.3s;
+  z-index: -1;
+}
+.vkl-work-item-icon span {
+  height: 70px;
+  width: 70px;
+  display: grid;
+  place-content: center;
+  background: var(--vkl-text-text-2);
+  border-radius: 50px;
+  transition: 0.3s;
+  margin-right: 24px;
+}
+.vkl-work-item-icon span img {
+  filter: brightness(0) invert(1);
+  transition: 0.3s;
+}
+.vkl-work-item-title {
+  color: var(--vkl-text-text-white);
+  transition: 0.3s;
+  font-size: var(--vkl-font-size-font-s24);
+  line-height: var(--vkl-specing-height24);
+}
+.vkl-work-item-desc {
+  color: #fff;
+  transition: 0.3s;
+  font-size: var(--vkl-font-size-font-s18);
+  line-height: var(--vkl-specing-height26);
+  padding-top: 16px;
+}
+.vkl-work-item:hover::after {
+  height: 100%;
+  transition: 0.3s;
+  top: 0;
+  bottom: 0;
+}
+
+/*----------------------------------------*/
 /*  7.3 Service css
 /*----------------------------------------*/
 .vkl-service-item {
@@ -5394,6 +5453,86 @@ p {
 }
 .vkl-service-item:hover .vkl-service-item-thumb img {
   transform: scale(1.1);
+  transition: 0.3s;
+}
+
+/*----------------------------------------*/
+/*  7.4 Team css
+/*----------------------------------------*/
+.vkl-team-item {
+  position: relative;
+  z-index: 1;
+}
+.vkl-team-item-thumb {
+  border-radius: 16px;
+  object-fit: cover;
+  transition: 0.3s;
+  height: 420px;
+  overflow: hidden;
+}
+.vkl-team-item-thumb img {
+  transition: 0.3s;
+}
+.vkl-team-item-content {
+  background: var(--vkl-text-text-white);
+  padding: 24px 20px;
+  border-radius: 16px;
+  text-align: center;
+  transition: 0.3s;
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+}
+.vkl-team-item-title {
+  transition: 0.3s;
+  font-size: var(--vkl-font-size-font-s20);
+  line-height: var(--vkl-specing-height20);
+}
+.vkl-team-item-desc {
+  font-size: var(--vkl-font-size-font-s18);
+  line-height: var(--vkl-specing-height18);
+  font-weight: var(--vkl-weight-medium);
+  transition: 0.3s;
+}
+.vkl-team-item-social ul li {
+  display: inline-block;
+}
+.vkl-team-item-social ul li a {
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  text-align: center;
+  display: inline-block;
+  border-radius: 50px;
+  background: var(--vkl-bg-bg-2);
+  transition: 0.3s;
+  color: var(--vkl-text-text-black);
+}
+.vkl-team-item-social ul li a:hover {
+  background: var(--vkl-text-text-1);
+  transition: 0.3s;
+}
+.vkl-team-item-social ul li a.share-icon {
+  border: 1px solid var(--vkl-border-border-2);
+}
+.vkl-team-item-social ul li a img {
+  margin-top: -4px;
+}
+.vkl-team-item:hover .vkl-team-item-thumb img {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+.vkl-team-item:hover .vkl-team-item-title {
+  color: var(--vkl-text-text-white);
+  transition: 0.3s;
+}
+.vkl-team-item:hover .vkl-team-item-desc {
+  color: var(--vkl-text-text-white);
+  transition: 0.3s;
+}
+.vkl-team-item:hover .vkl-team-item-content {
+  background: var(--vkl-text-text-black);
   transition: 0.3s;
 }
 
