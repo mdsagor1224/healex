@@ -7,7 +7,7 @@
 	right: 0;
 	bottom: 0;
 	z-index: 9999999999;
-	background-color: var(--vkl-text-text-2);
+	background-color: var(--vkl-text-text-black);
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -27,7 +27,7 @@
 
 .loading{
 	border: 1px solid transparent;
-	border-color: transparent var(--vkl-text-text-1) transparent var(--vkl-text-text-1);
+	border-color: transparent var(--vkl-text-text-2) transparent var(--vkl-text-text-2);
 	animation: rotate-loading 1.5s linear 0s infinite normal;
 	transform-origin: 50% 50%;
 }

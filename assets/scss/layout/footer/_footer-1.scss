@@ -43,7 +43,7 @@
         }
 
         &-4{
-            margin-left: 72px;
+            margin-left: 63px;
             @media #{$xl}{
                 margin-left: 0px;
             }
@@ -184,7 +184,7 @@
                     display: block;
                     transition: .3s;
                     &:hover{
-                        color: var(--vkl-text-text-1);
+                        color: var(--vkl-text-text-2);
                         transition: .3s;
                     }
                 }

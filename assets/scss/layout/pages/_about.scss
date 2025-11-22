@@ -5,6 +5,23 @@
 /*  7.2 About css
 /*----------------------------------------*/
 
-.vl-about-item-thumb img {
-    height: 370px !important;
+.vl-about-item-thumb{
+    img {
+        height: 370px !important;
+    }
+    &-2{
+        & img{
+            height: 603px !important;
+        }
+    }
+    &-3{
+        & img{
+            height: 442px !important;
+        }
+    }
+    &-4{
+        & img{
+            height: 582px !important;
+        }
+    }
 }

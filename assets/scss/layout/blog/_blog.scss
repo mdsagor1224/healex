@@ -67,4 +67,12 @@
             object-fit: cover;
         }
     }
+    &-2{
+        & .vl-clip-anim{
+            & img{
+                height: 348px !important;
+                object-fit: cover;
+            }
+        }
+    }
 }

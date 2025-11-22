@@ -71,6 +71,12 @@
             color: var(--vl-heading-color);
             border: 1px solid rgba(2,11,24,0.1);
             font-size: 14px;
+            transition: .3s;
+            &:hover{
+                background: var(--vkl-text-text-2);
+                transition: .3s;
+                color: var(--vkl-text-text-white);
+            }
         }
     }
 
@@ -92,5 +98,39 @@
     }
    
 
+}
+
+.vl-offcanvas-info a{
+    display: block;
+    margin-bottom: 10px;
+    &:last-child{
+        margin-bottom: 0;
+    }
+    span {
+        border: 1px solid var(--vkl-border-border-3);
+        height: 40px;
+        width: 40px;
+        display: inline-block;
+        line-height: 40px;
+        text-align: center;
+        border-radius: 50px;
+        margin-right: 4px;
+        transition: .3s;
+        & img{
+            margin-top: -4px;
+            transition: .3s;
+        }
+    }
+    &:hover{
+        color: var(--vkl-text-text-2);
+        & span{
+            background: var(--vkl-text-text-2);
+            transition: .3s;
+            & img{
+                filter: brightness(0) invert(1);
+                transition: .3s;
+            }
+        }
+    }
 }
 

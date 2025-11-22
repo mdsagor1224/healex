@@ -20,6 +20,15 @@ ul{
 	&-8{
 		border-radius: 8px;
 	}
+	&-16{
+		border-radius: 16px;
+	}
+	&-32{
+		border-radius: 32px;
+	}
+	&-88{
+		border-radius: 88px;
+	}
 }
 
 p{
@@ -61,6 +70,8 @@ p{
 	background-position: center;
 	background-repeat: no-repeat;
 }
+
+
 
 // swiper slider transition effect 
 .vl-slide-transtion {

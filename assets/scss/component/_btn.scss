@@ -75,7 +75,20 @@
     
 }
 
+.vl-thumb-btn{
+    & .vkl-primary-btn{
+        color: var(--vkl-text-text-black) !important;
+        &:hover{
+            color: var(--vkl-text-text-white) !important;
+        }
+    }
+}
 
+.vl-thumb-btn{
+    .vkl-primary-btn:hover {
+        color: #fff !important;
+    }
+}
 
 
 

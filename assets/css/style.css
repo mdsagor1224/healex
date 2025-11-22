@@ -326,6 +326,17 @@
   color: var(--vkl-text-text-black);
 }
 
+.vl-thumb-btn .vkl-primary-btn {
+  color: var(--vkl-text-text-black) !important;
+}
+.vl-thumb-btn .vkl-primary-btn:hover {
+  color: var(--vkl-text-text-white) !important;
+}
+
+.vl-thumb-btn .vkl-primary-btn:hover {
+  color: #fff !important;
+}
+
 .vl-btn {
   background: var(--vkl-text-text-1);
   padding: 16px 45px;
@@ -442,6 +453,9 @@
     line-height: var(--vkl-specing-height50);
   }
 }
+.vkl-hero-content .title-2 {
+  line-height: 70px;
+}
 
 /*----------------------------------------*/
 /*  Back to Top
@@ -477,7 +491,7 @@
   text-align: center;
   line-height: 56px;
   font-size: 18px;
-  color: #03256c;
+  color: var(--vkl-text-text-2);
   left: 0;
   top: 0;
   height: 56px;
@@ -515,7 +529,7 @@
 }
 
 .progress-wrap svg.progress-circle path {
-  stroke: #03256c;
+  stroke: var(--vkl-text-text-2);
   stroke-width: 4;
   box-sizing: border-box;
   transition: all 200ms linear;
@@ -586,6 +600,12 @@
   color: var(--vl-heading-color);
   border: 1px solid rgba(2, 11, 24, 0.1);
   font-size: 14px;
+  transition: 0.3s;
+}
+.vl-offcanvas-social a:hover {
+  background: var(--vkl-text-text-2);
+  transition: 0.3s;
+  color: var(--vkl-text-text-white);
 }
 .vl-offcanvas-overlay {
   position: fixed;
@@ -604,6 +624,40 @@
   visibility: visible;
 }
 
+.vl-offcanvas-info a {
+  display: block;
+  margin-bottom: 10px;
+}
+.vl-offcanvas-info a:last-child {
+  margin-bottom: 0;
+}
+.vl-offcanvas-info a span {
+  border: 1px solid var(--vkl-border-border-3);
+  height: 40px;
+  width: 40px;
+  display: inline-block;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50px;
+  margin-right: 4px;
+  transition: 0.3s;
+}
+.vl-offcanvas-info a span img {
+  margin-top: -4px;
+  transition: 0.3s;
+}
+.vl-offcanvas-info a:hover {
+  color: var(--vkl-text-text-2);
+}
+.vl-offcanvas-info a:hover span {
+  background: var(--vkl-text-text-2);
+  transition: 0.3s;
+}
+.vl-offcanvas-info a:hover span img {
+  filter: brightness(0) invert(1);
+  transition: 0.3s;
+}
+
 .preloader {
   position: fixed;
   top: 0;
@@ -611,7 +665,7 @@
   right: 0;
   bottom: 0;
   z-index: 9999999999;
-  background-color: var(--vkl-text-text-2);
+  background-color: var(--vkl-text-text-black);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -631,7 +685,7 @@
 
 .loading {
   border: 1px solid transparent;
-  border-color: transparent var(--vkl-text-text-1) transparent var(--vkl-text-text-1);
+  border-color: transparent var(--vkl-text-text-2) transparent var(--vkl-text-text-2);
   animation: rotate-loading 1.5s linear 0s infinite normal;
   transform-origin: 50% 50%;
 }
@@ -954,6 +1008,17 @@
   display: inline-block;
   margin-right: 30px;
 }
+@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 575px) {
+  .vkl-check-iconbox ul li:last-child {
+    margin-bottom: 0px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 575px) {
+  .vkl-check-iconbox ul li {
+    margin-bottom: 10px;
+    display: block;
+  }
+}
 .vkl-check-iconbox ul li span {
   height: 22px;
   width: 22px;
@@ -979,7 +1044,7 @@
   transition: 0.3s;
 }
 .vl-icon-list ul li a:hover {
-  color: var(--vkl-text-text-1);
+  color: var(--vkl-text-text-2);
   transition: 0.3s;
   margin-left: 4px;
 }
@@ -993,6 +1058,7 @@
   padding: 20px 24px;
   display: flex;
   align-items: center;
+  transition: 0.3s;
 }
 .vkl-single-iconbox .icon span {
   height: 80px;
@@ -1016,6 +1082,10 @@
 }
 .vkl-single-iconbox .content .para:hover {
   color: var(--vkl-text-text-2);
+  transition: 0.3s;
+}
+.vkl-single-iconbox:hover {
+  background: var(--vkl-text-text-1);
   transition: 0.3s;
 }
 .vkl-single-iconbox:hover .icon span {
@@ -1144,6 +1214,17 @@
   background-color: var(--vkl-text-text-2); /* $theme-color */
   border: 1px solid #686363;
   opacity: 0;
+}
+
+/*----------------------------------------*/
+/*  2.11 Breadcrumb
+/*----------------------------------------*/
+.vkl-breacrumb-menu ul li {
+  display: inline-block;
+  color: var(--vkl-text-text-white);
+}
+.vkl-breacrumb-menu ul li .active {
+  font-weight: 700;
 }
 
 * {
@@ -1349,6 +1430,15 @@ ul li {
 
 .br-8 {
   border-radius: 8px;
+}
+.br-16 {
+  border-radius: 16px;
+}
+.br-32 {
+  border-radius: 32px;
+}
+.br-88 {
+  border-radius: 88px;
 }
 
 p {
@@ -4770,6 +4860,10 @@ p {
   height: 370px !important;
   object-fit: cover;
 }
+.vkl-blog-item-thumb-2 .vl-clip-anim img {
+  height: 348px !important;
+  object-fit: cover;
+}
 
 /*----------------------------------------*/
 /*  6.1 Footer Style 1
@@ -4817,7 +4911,7 @@ p {
   }
 }
 .vl-footer-widget-4 {
-  margin-left: 72px;
+  margin-left: 63px;
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
   .vl-footer-widget-4 {
@@ -4948,7 +5042,7 @@ p {
   transition: 0.3s;
 }
 .vl-copy-righ1t .vl-copy-right-menu ul li a:hover {
-  color: var(--vkl-text-text-1);
+  color: var(--vkl-text-text-2);
   transition: 0.3s;
 }
 
@@ -5108,6 +5202,7 @@ p {
   margin-right: 0;
   display: block;
   text-align: start;
+  margin-left: 24px;
 }
 .vl-main-menu ul > li .sub-menu li a {
   color: var(--vkl-text-text-black);
@@ -5133,6 +5228,12 @@ p {
   opacity: 1;
   visibility: visible;
   top: 0;
+}
+.vl-main-menu ul > li .sub-menu .arrow-right {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .vl-main-menu ul > li:hover a {
   color: var(--vkl-text-text-1);
@@ -5165,9 +5266,9 @@ p {
 
 .vl-mega-menu {
   position: absolute;
-  left: -314px;
+  left: -394px;
   top: 105%;
-  width: 1295px;
+  width: 1322px;
   background: var(--vkl-text-text-white);
   padding: 25px;
   padding-bottom: 0;
@@ -5176,6 +5277,8 @@ p {
   visibility: hidden;
   transition: 0.3s;
   border-radius: 8px;
+  height: 500px;
+  overflow-y: scroll;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 575px) {
   .vl-mega-menu {
@@ -5342,6 +5445,15 @@ p {
 .vl-about-item-thumb img {
   height: 370px !important;
 }
+.vl-about-item-thumb-2 img {
+  height: 603px !important;
+}
+.vl-about-item-thumb-3 img {
+  height: 442px !important;
+}
+.vl-about-item-thumb-4 img {
+  height: 582px !important;
+}
 
 /*----------------------------------------*/
 /*  7.10 Contact css
@@ -5440,6 +5552,8 @@ input[type=date]:focus {
 .vkl-cta-area {
   position: relative;
   z-index: 1;
+  padding-top: 70px;
+  padding-bottom: 70px;
 }
 .vkl-cta-area::after {
   position: absolute;
@@ -5971,10 +6085,21 @@ input[type=date]:focus {
   padding-top: 196px;
   padding-bottom: 80px;
 }
+.vkl-banner-area-2 {
+  padding-bottom: 100px;
+}
 
 .shape-1 {
   top: 295px;
   right: 200px;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 575px) {
+  .shape-1 {
+    right: 60px;
+  }
+}
+.shape-1-1 {
+  top: 143px;
 }
 
 .shape-2 {
@@ -5982,6 +6107,12 @@ input[type=date]:focus {
 }
 .shape-2 img {
   height: 532px;
+}
+.shape-2-2 {
+  top: 88px;
+}
+.shape-2-2 img {
+  height: 434px;
 }
 
 .vkl-banner-large-thumb {

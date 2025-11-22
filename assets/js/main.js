@@ -1,9 +1,8 @@
 (function($){
     "use strict";
-
-
-     // back-to-top
-         // page-progress
+	/* ================================
+        back-to-top
+    ================================ */
     var progressPath = document.querySelector(".progress-wrap path");
     var pathLength = progressPath.getTotalLength();
     progressPath.style.transition = progressPath.style.WebkitTransition =
@@ -35,10 +34,10 @@
       jQuery("html, body").animate({ scrollTop: 0 }, duration);
       return false;
     });
-     
-
-    // stiky js
-    var windowOn = $(window);
+	/* ================================
+        stiky js
+    ================================ */
+	var windowOn = $(window);
     windowOn.on('scroll', function () {
       var scroll = windowOn.scrollTop();
       if (scroll < 100) {
@@ -47,59 +46,45 @@
         $("#vl-header-sticky").addClass("header-sticky");
       }
     });
-    
-
-
-
-
-        // mobile menu 
-        var vlMenuWrap = $('.vl-mobile-menu-active > ul').clone();
-        var vlSideMenu = $('.vl-offcanvas-menu nav');
-        vlSideMenu.append(vlMenuWrap);
-        if ($(vlSideMenu).find('.sub-menu, .vl-mega-menu').length != 0) {
-          $(vlSideMenu).find('.sub-menu, .vl-mega-menu').parent().append('<button class="vl-menu-close"><i class="fas fa-chevron-right"></i></button>');
-        }
-    
-        var sideMenuList = $('.vl-offcanvas-menu nav > ul > li button.vl-menu-close, .vl-offcanvas-menu nav > ul li.has-dropdown > a');
-        $(sideMenuList).on('click', function (e) {
-          console.log(e);
-          e.preventDefault();
-          if (!($(this).parent().hasClass('active'))) {
-            $(this).parent().addClass('active');
-            $(this).siblings('.sub-menu, .vl-mega-menu').slideDown();
-          } else {
-            $(this).siblings('.sub-menu, .vl-mega-menu').slideUp();
-            $(this).parent().removeClass('active');
-          }
-        });
-
-
-    $(".vl-offcanvas-toggle").on('click',function(){
+	/* ================================
+        mobile menu 
+    ================================ */
+	var vlMenuWrap = $('.vl-mobile-menu-active > ul').clone();
+	var vlSideMenu = $('.vl-offcanvas-menu nav');
+	vlSideMenu.append(vlMenuWrap);
+	if ($(vlSideMenu).find('.sub-menu, .vl-mega-menu').length != 0) {
+		$(vlSideMenu).find('.sub-menu, .vl-mega-menu').parent().append('<button class="vl-menu-close"><i class="fas fa-chevron-right"></i></button>');
+	}
+	var sideMenuList = $('.vl-offcanvas-menu nav > ul > li button.vl-menu-close, .vl-offcanvas-menu nav > ul li.has-dropdown > a');
+	$(sideMenuList).on('click', function (e) {
+		console.log(e);
+		e.preventDefault();
+		if (!($(this).parent().hasClass('active'))) {
+		$(this).parent().addClass('active');
+		$(this).siblings('.sub-menu, .vl-mega-menu').slideDown();
+		} else {
+		$(this).siblings('.sub-menu, .vl-mega-menu').slideUp();
+		$(this).parent().removeClass('active');
+		}
+	});
+	$(".vl-offcanvas-toggle").on('click',function(){
         $(".vl-offcanvas").addClass("vl-offcanvas-open");
         $(".vl-offcanvas-overlay").addClass("vl-offcanvas-overlay-open");
     });
-
-    $(".vl-offcanvas-close-toggle,.vl-offcanvas-overlay").on('click', function(){
+	$(".vl-offcanvas-close-toggle,.vl-offcanvas-overlay").on('click', function(){
         $(".vl-offcanvas").removeClass("vl-offcanvas-open");
         $(".vl-offcanvas-overlay").removeClass("vl-offcanvas-overlay-open");
     });
-
-
-
 	AOS.init({
 		duration:1000,
 		once: true,
 	});
-
 	/* ================================
        Nice Select Js Start
     ================================ */
-
-    if ($('.single-select').length) {
+	if ($('.single-select').length) {
         $('.single-select').niceSelect();
     }
-
-
 	/* ================================
         Jarallax
     ================================ */
@@ -108,12 +93,10 @@
 		speed: 0.2,
 		});
 	}
-
-	    /* ================================
+	/* ================================
         Mouse Cursor Animation Js Start
     ================================ */
-
-    if ($(".mouseCursor").length > 0) {
+	if ($(".mouseCursor").length > 0) {
         function itCursor() {
             var myCursor = jQuery(".mouseCursor");
             if (myCursor.length) {
@@ -146,19 +129,15 @@
         }
         itCursor();
     }
-
-
-/* ================================
-	Smooth Scroller And Title Animation Js Start
-================================ */
+	/* ================================
+		Smooth Scroller And Title Animation Js Start
+	================================ */
     if ($('#smooth-wrapper').length && $('#smooth-content').length) {
         gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
-
-        gsap.config({
+			gsap.config({
             nullTargetWarn: false,
         });
-
-        let smoother = ScrollSmoother.create({
+		let smoother = ScrollSmoother.create({
             wrapper: "#smooth-wrapper",
             content: "#smooth-content",
             smooth: 2,
@@ -168,17 +147,55 @@
             ignoreMobileResize: true,
         });
     }
-
-    // popup
+	/* ================================
+		popup image
+	================================ */
     $('.popup-image').magnificPopup({
         type: 'image'
-      });
+    });
+	/* ================================
+		popup video
+	================================ */
+	$('.popup-video').magnificPopup({
+	type: 'iframe'
+	});
 
-      $('.popup-video').magnificPopup({
-        type: 'iframe'
-      });
+ 	/* ================================
+		Counter js
+	================================ */
 
+	// Wait 2 seconds, then start counting
+	setTimeout(function() {
+		document.getElementById("myOdometer").innerHTML = 500;
+	}, 2000);
 
+	setTimeout(function() {
+		document.getElementById("myOdometer1").innerHTML = 99;
+	}, 2000);
+
+	setTimeout(function() {
+		document.getElementById("myOdometer2").innerHTML = 12;
+	}, 2000);
+
+	setTimeout(function() {
+		document.getElementById("myOdometer3").innerHTML = 12;
+	}, 2000);
+
+	setTimeout(function() {
+		document.getElementById("myOdometer4").innerHTML = 1500;
+	}, 2000);
+
+	setTimeout(function() {
+		document.getElementById("myOdometer5").innerHTML = 700;
+	}, 2000);
+
+	setTimeout(function() {
+		document.getElementById("myOdometer6").innerHTML = 13;
+	}, 2000);
+
+	/* ================================
+		preloader
+	================================ */
     $(window).on("load", function (event) {
       setTimeout(function () {
         $(".preloader").fadeToggle();
