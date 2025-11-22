@@ -96,6 +96,21 @@
     display: flex;
     align-items: center;
     transition: .3s;
+    position: relative;
+    z-index: 1;
+    &::after{
+        position: absolute;
+        content: "";
+        left: 0;
+        height: 33%;
+        width: 100%;
+        background: var(--vkl-text-text-1);
+        transition: all 500ms ease;
+        z-index: -1;
+        transform: scaleX(.5);
+        right: 0;
+        opacity: 0;
+    }
     & .icon{
         & span{
             height: 80px;
@@ -125,8 +140,11 @@
         }
     }
     &:hover{
-        background: var(--vkl-text-text-1);
-        transition: .3s;
+        &::after{
+            height: 100%;
+            transform: scaleX(1);
+            opacity: 1;
+        }
         & .icon{
             & span{
                 transition: .3s;

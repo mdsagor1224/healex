@@ -67,12 +67,24 @@
                 margin-bottom: 16px;
             }
         }
+        &-2{
+            & span{
+                background: var(--vkl-bg-bg-1);
+                & img{
+                    filter: inherit;
+                    transition: .3s;
+                }
+            }
+        }
     }
     &-title{
         color: var(--vkl-text-text-white);
         transition: .3s;
         font-size: var(--vkl-font-size-font-s24);
         line-height: var(--vkl-specing-height24);
+        &-2{
+            color: var(--vkl-text-text-black);
+        }
         @media #{$xs}{
             line-height: var(--vkl-specing-height32);
         }
@@ -83,6 +95,9 @@
         font-size: var(--vkl-font-size-font-s18);
         line-height: var(--vkl-specing-height26);
         padding-top: 16px;
+        &-2{
+            color: var(--vkl-text-text-3);
+        }
     }
     &:hover{
         &::after{
@@ -116,5 +131,71 @@
                 transition: .3s;
             }
         }
+    }
+    &-style-2{
+        border: transparent;
+        padding: 0;
+        &::after{
+            background: transparent;
+        }
+    }
+}
+
+.vkl-work-bg-shape {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+.vkl-work-bg-shape img {
+    height: 100%;
+}
+
+// work style 2 
+.vkl-work-item-2{
+    text-align: center;
+    padding: 0 15px;
+    @media #{$md,$xs}{
+        padding: 0;
+    }
+    &-number{
+        font-size: 80px;
+        line-height: 88px;
+    }
+    &-title{
+        font-size: var(--vkl-font-size-font-s24);
+        line-height: var(--vkl-specing-height24);
+        transition: .3s;
+        padding-top: 32px;
+        &:hover{
+            color: var(--vkl-text-text-2);
+            transition: .3s;
+        }
+    }
+    &-desc{
+        color: var(--vkl-text-text-3);
+        font-size: var(--vkl-font-size-font-s18);
+        line-height: var(--vkl-specing-height26);
+        transition: .3s;
+        padding-top: 16px;
+    }
+}
+
+.vkl-work-shape2 {
+    position: absolute;
+    left: 28%;
+    top: 17px;
+}
+
+.vkl-work-shape3 {
+    position: absolute;
+    right: 28%;
+    top: 17px;
+}
+
+
+.vkl-benifate-wrap {
+    padding-right: 22px;
+    @media #{$lg,$md,$xs}{
+        padding-right: 0;
     }
 }

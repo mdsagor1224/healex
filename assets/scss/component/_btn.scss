@@ -91,6 +91,118 @@
 }
 
 
+// primary btn home 2
+
+.theme-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--vkl-font-size-font-s18);
+  line-height: 1;
+  color: var(--vkl-text-text-black);
+  background: var(--vkl-text-text-1);
+  padding: 5.5px;
+  border-radius: 50px;
+  position: relative;
+  z-index: 1;
+  font-weight: var(--vkl-weight-semibold);
+
+  .btn_inner {
+    position: relative;
+    z-index: 1;
+    padding: 15px 60px 15px 30px;
+    width: 100%;
+    text-align: center;
+
+    &::before {
+        content: "";
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        inset-inline-start: 0;
+        width: 48px;
+        height: 100%;
+        background-color: var(--vkl-text-text-white);
+        border-radius: 50px;
+        transition: all 0.3s ease-in-out;
+        left: auto;
+        right: 0;
+    }
+
+    .btn_icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        inset-inline-start: 0;
+        top: 0;
+        min-width: 48px;
+        height: 100%;
+        z-index: 2;
+        font-size: 16px;
+        line-height: 1;
+        color: var(--vkl-text-text-black);
+        left: auto;
+        right: 0;
+      > span {
+        overflow: hidden;
+        position: relative;
+        display: inline-flex;
+
+        i:first-child,
+        i:last-child {
+          transition: transform 0.4s ease-in-out;
+        }
+
+        i:last-child {
+          position: absolute;
+          transform: translateX(-150%);
+        }
+      }
+    }
+
+    .btn_text {
+      display: inline-flex;
+      overflow: hidden;
+      color: var(--vkl-text-text-black);
+      text-shadow: 0 23px 0 currentColor;
+      white-space: nowrap;
+      > span {
+        display: flex;
+        align-items: center;
+        backface-visibility: hidden;
+        transform: translateY(0);
+        transition: 0.5s;
+      }
+    }
+  }
+
+  &:hover {
+    .btn_inner {
+      &::before {
+        width: 100%;
+      }
+
+      .btn_icon {
+        i:first-child {
+          transform: translateX(150%);
+        }
+        i:last-child {
+          transform: translateX(0);
+        }
+      }
+
+      .btn_text {
+        color: var(--white);
+        > span {
+          transform: translateY(-24px);
+        }
+      }
+    }
+  }
+}
+
+
 
 
 // old btn

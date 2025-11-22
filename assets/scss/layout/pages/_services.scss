@@ -65,3 +65,86 @@
         }
     }
 }
+
+// service item 2 
+
+.vkl-service-item-2{
+    text-align: center;
+    position: relative;
+    &-thumb{
+        height: 350px;
+        width: 350px;
+        object-fit: cover;
+        margin: 0 auto;
+        overflow: hidden;
+        border-radius: 50%;
+        position: relative;
+        z-index: 1;
+        & img{
+            height: 350px;
+            object-fit: cover;
+            transition: 0.3s;
+            overflow: hidden;
+            transition: .3s;
+        }
+    }
+    &-title{
+        color: var(--vkl-text-text-white);
+        font-size: var(--vkl-font-size-font-s24);
+        line-height: var(--vkl-specing-height24);
+        transition: .3s;
+        &:hover{
+            color: var(--vkl-text-text-1);
+            transition: .3s;
+        }
+    }
+    &-desc{
+        color: #fff;
+        font-size: var(--vkl-font-size-font-s18);
+        line-height: var(--vkl-specing-height26);
+    }
+    &-icon{
+        & span{
+            height: 90px;
+            width: 90px;
+            background: var(--vkl-text-text-2);
+            border-radius: 50%;
+            display: inline-block;
+            line-height: 90px;
+            transition: .3s;
+            position: absolute;
+            left: 35px;
+            top: 0;
+            z-index: 1;
+            & img{
+                filter: brightness(0) invert(1);
+                transition: .3s;
+            }
+        }
+    }
+    &:hover{
+        .vkl-service-item-2{
+            &-thumb{
+                & img{
+                    transform: scale(1.1);
+                    transition: .3s;
+                }
+            }
+            &-icon{
+                & span{
+                    background: var(--vkl-text-text-1);
+                    transition: .3s;
+                    & img{
+                        filter: inherit;
+                        transition: .3s;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.vkl-service-item-2:hover .vkl-service-item-2-thumb img {
+    transform: scale(1.1);
+    transition: 0.3s;
+}

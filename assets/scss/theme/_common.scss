@@ -17,6 +17,9 @@ ul{
 }
 
 .br{
+	&-6{
+		border-radius: 6px;
+	}
 	&-8{
 		border-radius: 8px;
 	}

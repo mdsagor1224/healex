@@ -1,5 +1,6 @@
 (function($){
     "use strict";
+	
 	/* ================================
         back-to-top
     ================================ */
@@ -166,23 +167,23 @@
 
 	// Wait 2 seconds, then start counting
 	setTimeout(function() {
-		document.getElementById("myOdometer").innerHTML = 500;
+		document.getElementById("myOdometer").innerHTML = 5;
 	}, 2000);
 
 	setTimeout(function() {
-		document.getElementById("myOdometer1").innerHTML = 99;
+		document.getElementById("myOdometer1").innerHTML = 10;
 	}, 2000);
 
 	setTimeout(function() {
-		document.getElementById("myOdometer2").innerHTML = 12;
+		document.getElementById("myOdometer2").innerHTML = 99;
 	}, 2000);
 
 	setTimeout(function() {
-		document.getElementById("myOdometer3").innerHTML = 12;
+		document.getElementById("myOdometer3").innerHTML = 13;
 	}, 2000);
 
 	setTimeout(function() {
-		document.getElementById("myOdometer4").innerHTML = 1500;
+		document.getElementById("myOdometer4").innerHTML = 3;
 	}, 2000);
 
 	setTimeout(function() {
@@ -202,12 +203,6 @@
       }, 200);
     
     });
-
-
-
-
-
-
 
 
 })(jQuery);
@@ -339,91 +334,92 @@ function initHeadingAnimation() {
         window.addEventListener("load", initHeadingAnimation);
   }
 
+//image cliping effect
+document.addEventListener("DOMContentLoaded", () => {
 
+	const initialClipPaths = [
+		"polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%)",
+		"polygon(33.33% 0%, 33.33% 0%, 33.33% 0%, 33.33% 0%)",
+		"polygon(65.66% 0%, 66.66% 0%, 66.66% 0%, 66.66% 0%)",
+		"polygon(0% 33.33%, 0% 33.33%, 0% 33.33%, 0% 33.33%)",
+		"polygon(33.33% 33.33%, 33.33% 33.33%, 33.33% 33.33%, 33.33% 33.33%)",
+		"polygon(65.66% 33.33%, 66.66% 33.33%, 66.66% 33.33%, 66.66% 33.33%)",
+		"polygon(0% 66.66%, 0% 66.66%, 0% 66.66%, 0% 66.66%)",
+		"polygon(33.33% 66.66%, 33.33% 66.66%, 33.33% 66.66%, 33.33% 66.66%)",
+		"polygon(65.66% 66.66%, 66.66% 66.66%, 66.66% 66.66%, 66.66% 66.66%)"
+	];
 
-	//image cliping effect
-	document.addEventListener("DOMContentLoaded", () => {
+	const finalClipPaths = [
+		"polygon(0% 0%, 34.33% 0%, 34.33% 34.33%, 0% 34.33%)",
+		"polygon(32.33% 0%, 66.66% 0%, 66.66% 33.33%, 33.33% 34.33%)",
+		"polygon(65.66% 0%, 100% 0%, 100% 33.33%, 65.66% 34.33%)",
+		"polygon(0% 33.33%, 33.33% 33.33%, 33.33% 66.66%, 0% 66.66%)",
+		"polygon(30.33% 33.33%, 66.66% 33.33%, 66.66% 66.66%, 33.33% 66.66%)",
+		"polygon(65.66% 33.33%, 100% 32.33%, 100% 66.66%, 65.66% 66.66%)",
+		"polygon(0% 65.66%, 33.33% 66.66%, 33.33% 100%, 0% 100%)",
+		"polygon(30.33% 66.66%, 66.66% 65.66%, 66.66% 100%, 33.33% 100%)",
+		"polygon(65.66% 66.66%, 100% 65.66%, 100% 100%, 65.66% 100%)"
+	];
 
-		const initialClipPaths = [
-			"polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%)",
-			"polygon(33.33% 0%, 33.33% 0%, 33.33% 0%, 33.33% 0%)",
-			"polygon(65.66% 0%, 66.66% 0%, 66.66% 0%, 66.66% 0%)",
-			"polygon(0% 33.33%, 0% 33.33%, 0% 33.33%, 0% 33.33%)",
-			"polygon(33.33% 33.33%, 33.33% 33.33%, 33.33% 33.33%, 33.33% 33.33%)",
-			"polygon(65.66% 33.33%, 66.66% 33.33%, 66.66% 33.33%, 66.66% 33.33%)",
-			"polygon(0% 66.66%, 0% 66.66%, 0% 66.66%, 0% 66.66%)",
-			"polygon(33.33% 66.66%, 33.33% 66.66%, 33.33% 66.66%, 33.33% 66.66%)",
-			"polygon(65.66% 66.66%, 66.66% 66.66%, 66.66% 66.66%, 66.66% 66.66%)"
+	// Create mask divs for each wrapper
+	document.querySelectorAll(".vl-clip-anim").forEach(wrapper => {
+		const img = wrapper.querySelector(".vl-anim-img[data-animate='true']");
+		if (!img) return;
+		const url = img.src;
+
+		// Remove old masks if any (reuse safe)
+		wrapper.querySelectorAll(".mask").forEach(m => m.remove());
+
+		for (let i = 0; i < 9; i++) {
+			const mask = document.createElement("div");
+			mask.className = `mask mask-${i + 1}`;
+			Object.assign(mask.style, {
+				backgroundImage: `url(${url})`,
+				backgroundSize: "cover",
+				backgroundPosition: "center",
+				position: "absolute",
+				inset: "0"
+			});
+			wrapper.appendChild(mask);
+		}
+	});
+
+	// Animate masks
+	gsap.utils.toArray(".vl-clip-anim").forEach(wrapper => {
+		const masks = wrapper.querySelectorAll(".mask");
+		if (!masks.length) return;
+
+		gsap.set(masks, { clipPath: (i) => initialClipPaths[i] });
+
+		const order = [
+			[".mask-1"],
+			[".mask-2", ".mask-4"],
+			[".mask-3", ".mask-5", ".mask-7"],
+			[".mask-6", ".mask-8"],
+			[".mask-9"]
 		];
 
-		const finalClipPaths = [
-			"polygon(0% 0%, 34.33% 0%, 34.33% 34.33%, 0% 34.33%)",
-			"polygon(32.33% 0%, 66.66% 0%, 66.66% 33.33%, 33.33% 34.33%)",
-			"polygon(65.66% 0%, 100% 0%, 100% 33.33%, 65.66% 34.33%)",
-			"polygon(0% 33.33%, 33.33% 33.33%, 33.33% 66.66%, 0% 66.66%)",
-			"polygon(30.33% 33.33%, 66.66% 33.33%, 66.66% 66.66%, 33.33% 66.66%)",
-			"polygon(65.66% 33.33%, 100% 32.33%, 100% 66.66%, 65.66% 66.66%)",
-			"polygon(0% 65.66%, 33.33% 66.66%, 33.33% 100%, 0% 100%)",
-			"polygon(30.33% 66.66%, 66.66% 65.66%, 66.66% 100%, 33.33% 100%)",
-			"polygon(65.66% 66.66%, 100% 65.66%, 100% 100%, 65.66% 100%)"
-		];
+		const tl = gsap.timeline({
+			scrollTrigger: { trigger: wrapper, start: "top 75%" }
+		});
 
-		// Create mask divs for each wrapper
-		document.querySelectorAll(".vl-clip-anim").forEach(wrapper => {
-			const img = wrapper.querySelector(".vl-anim-img[data-animate='true']");
-			if (!img) return;
-			const url = img.src;
+		order.forEach((targets, i) => {
+			const validTargets = targets
+				.map(c => wrapper.querySelector(c))
+				.filter(el => el); // filter out nulls
 
-			// Remove old masks if any (reuse safe)
-			wrapper.querySelectorAll(".mask").forEach(m => m.remove());
-
-			for (let i = 0; i < 9; i++) {
-				const mask = document.createElement("div");
-				mask.className = `mask mask-${i + 1}`;
-				Object.assign(mask.style, {
-					backgroundImage: `url(${url})`,
-					backgroundSize: "cover",
-					backgroundPosition: "center",
-					position: "absolute",
-					inset: "0"
-				});
-				wrapper.appendChild(mask);
+			if (validTargets.length) {
+				tl.to(validTargets, {
+					clipPath: (j, el) => finalClipPaths[Array.from(masks).indexOf(el)],
+					duration: 1,
+					ease: "power4.out",
+					stagger: 0.1
+				}, i * 0.125);
 			}
 		});
-
-		// Animate masks
-		gsap.utils.toArray(".vl-clip-anim").forEach(wrapper => {
-			const masks = wrapper.querySelectorAll(".mask");
-			if (!masks.length) return;
-
-			gsap.set(masks, { clipPath: (i) => initialClipPaths[i] });
-
-			const order = [
-				[".mask-1"],
-				[".mask-2", ".mask-4"],
-				[".mask-3", ".mask-5", ".mask-7"],
-				[".mask-6", ".mask-8"],
-				[".mask-9"]
-			];
-
-			const tl = gsap.timeline({
-				scrollTrigger: { trigger: wrapper, start: "top 75%" }
-			});
-
-			order.forEach((targets, i) => {
-				const validTargets = targets
-					.map(c => wrapper.querySelector(c))
-					.filter(el => el); // filter out nulls
-
-				if (validTargets.length) {
-					tl.to(validTargets, {
-						clipPath: (j, el) => finalClipPaths[Array.from(masks).indexOf(el)],
-						duration: 1,
-						ease: "power4.out",
-						stagger: 0.1
-					}, i * 0.125);
-				}
-			});
-		});
 	});
+});
+
+
+
 
