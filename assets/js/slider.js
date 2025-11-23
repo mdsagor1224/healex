@@ -3,6 +3,8 @@
 ****************************************************
 01. Service Slider (Home One)
 02. Team Slider (Home One)
+03. 
+04. Service Slider (Home two)
 
 ****************************************************/
 
@@ -20,12 +22,12 @@ if ($('.vlServicetActive').length) {
     const vlServicetActive = new Swiper('.vlServicetActive', {
         slidesPerView: 4,
         spaceBetween: 30,
-		loop:true,
+		    loop:true,
         speed: 4000,
         keyboard: {
             enabled: true,
         },
-		autoplay: {
+		    autoplay: {
             delay: 1,
             disableOnInteraction: true,
           },
@@ -95,14 +97,14 @@ if ($('.vlTestiomonialActive').length) {
     const vlTestiomonialActive = new Swiper('.vlTestiomonialActive', {
         slidesPerView: 1,
         spaceBetween: 30,
-		loop:true,
+        loop:true,
         keyboard: {
             enabled: true,
         },
-		// autoplay: {
-		// 	delay: 2500,
-		// 	disableOnInteraction: false,
-		// },
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
         navigation: {
             nextEl: ".vl-review-button-next",
             prevEl: ".vl-review-button-prev",
@@ -110,6 +112,44 @@ if ($('.vlTestiomonialActive').length) {
     });
 }
 
+
+/*----------------------------------------*/
+/*  04. Service Slider (Home two)
+/*----------------------------------------*/
+
+if ($('.vlServicetActive2').length) {
+    const vlServicetActive2 = new Swiper('.vlServicetActive2', {
+        slidesPerView: 4,
+        spaceBetween: 30,
+		    loop:true,
+        speed: 3000,
+        keyboard: {
+            enabled: true,
+        },
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          0: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 2,
+          },
+          992: {
+            slidesPerView: 3,
+          },
+          1200: {
+            slidesPerView: 4,
+          }
+      },
+    });
+}
 
 
 })(jQuery);

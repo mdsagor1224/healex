@@ -186,6 +186,14 @@
             right: 0;
         }
     }
+    &-3{
+        bottom: 32px;
+        right: 24px;
+        top: inherit;
+        @media #{$lg,$md,$xs}{
+            position: absolute;
+        }
+    }
 }
 
 .vl-review-button{
@@ -216,5 +224,10 @@
                 background: var(--vkl-text-text-2);
             }
         }
+    }
+    &-3{
+        background: rgba(255, 255, 255, 0.10);
+        backdrop-filter: blur(2px);
+        color: var(--vkl-text-text-white);
     }
 }

@@ -148,3 +148,34 @@
     transform: scale(1.1);
     transition: 0.3s;
 }
+
+// service dot style home 2
+
+.vkl-dot-pagination{
+    & .swiper-pagination {
+        position: relative;
+    }
+    & .swiper-pagination-bullet {
+        opacity: 1;
+        height: 10px;
+        width: 10px;
+        background: #425642;
+        margin: 0 10px !important;
+        &-active {
+            background: #fff;
+            position: relative;
+            z-index: 1;
+            &::after {
+                position: absolute;
+                content: "";
+                height: 24px;
+                width: 24px;
+                left: -7px;
+                top: -7px;
+                z-index: -1;
+                border: 5px solid #2B412B;
+                border-radius: 50%;
+            }
+        }
+    }
+}

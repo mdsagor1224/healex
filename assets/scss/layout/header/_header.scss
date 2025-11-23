@@ -60,10 +60,6 @@
         }
     }
 }
-
-
-
-
 .vl-header-area {
     padding-top: 20px;
 
@@ -89,7 +85,6 @@
 .vl-logo {
     width: 146px;
 }
-
 
 .vl-main-menu{
     & ul{
@@ -192,21 +187,18 @@
         & ul{
             & li{
                 & a{
-                    color: #0A0E1A;
-                    &:before{
-                        color: var(--vl-theme-orange);
-                    }
+                    color: var(--vkl-text-text-black);
                 }
                 &:hover{
                     & a{
-                        color: var(--vl-theme-orange);
+                        color: var(--vkl-text-text-1);
                     }
                 }
                 & .sub-menu{
                     & li{
                         &:hover{
                             & > a{
-                                color: var(--vl-theme-orange);
+                                color: var(--vkl-text-text-1);
                             }
                         }
                     }

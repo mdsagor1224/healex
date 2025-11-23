@@ -58,6 +58,33 @@
             
         }
     }
+    &-2{
+        border: 1px solid rgba(19, 44, 18, 0.10);
+        transition: .3s;
+        & .vkl-blog-item{
+            &-content{
+                padding: 32px;
+            }
+            &-tags{
+                & a{
+                    border-right: 1px solid #D3DCD6;
+                    &:last-child{
+                        border-right: transparent;
+                    }
+                }
+            }
+        }
+        &:hover{
+            background: var(--vkl-bg-bg-1);
+            transition: .3s;
+            border: 1px solid transparent;
+        }
+    }
+    &-3{
+        border: 1px solid rgba(19, 44, 18, 0.10);
+        padding: 22px 20px;
+    }
+
 }
 
 .vkl-blog-item-thumb{
@@ -73,6 +100,15 @@
                 height: 348px !important;
                 object-fit: cover;
             }
+        }
+    }
+}
+
+.vkl-blog-item-thumb{
+    &-6{
+        img {
+            height: 300px !important;
+            object-fit: cover;
         }
     }
 }

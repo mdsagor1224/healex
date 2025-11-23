@@ -139,6 +139,122 @@
             background: transparent;
         }
     }
+    &-style-3{
+        border: 1px solid rgba(19, 44, 18, 0.10);
+        padding: 32px 28px;
+        display: block;
+        & .vkl-work-item{
+            &-icon{
+                & span{
+                    background: var(--vkl-bg-bg-2);
+                    & img{
+                        filter: inherit;
+                    }
+                }
+            }
+            &-title{
+                color: var(--vkl-text-text-black);
+                padding-top: 100px;
+            }
+            &-desc{
+                color: var(--vkl-text-text-3);
+            }
+        }
+        &::after{
+            background: transparent;
+        }
+        &:hover{
+            background: var(--vkl-bg-bg-2);
+        }
+    }
+    &-style-4{
+        padding: 0;
+        border: transparent;
+        margin-bottom: 60px;
+        @media #{$lg,$md,$xs}{
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        &:last-child{
+            margin-bottom: 0;
+        }
+        &::after{
+            background: transparent;
+        }
+        & .vkl-work-item{
+            &-content{
+                text-align: end;
+                @media #{$lg,$md,$xs}{
+                    text-align: start;
+                }
+            }
+            &-icon{
+                & span{
+                    margin-left: 24px;
+                    margin-right: 0;
+                    background: var(--vkl-text-text-2);
+                    & img{
+                        filter: inherit;
+                    }
+                    @media #{$lg,$md,$xs}{
+                        margin-left: 0;
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+            &-title{
+                color: var(--vkl-text-text-black);
+            }
+            &-desc{
+                color: var(--vkl-text-text-3);
+            }
+        }
+    }
+    &-style-5{
+        padding: 0;
+        border: transparent;
+        margin-bottom: 60px;
+        display: flex;
+        flex-direction: row-reverse;
+        @media #{$lg,$md,$xs}{
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        &:last-child{
+            margin-bottom: 0;
+        }
+        &::after{
+            background: transparent;
+        }
+        & .vkl-work-item{
+            &-content{
+                text-align: start;
+                @media #{$lg,$md,$xs}{
+                    text-align: start;
+                }
+            }
+            &-icon{
+                & span{
+                    margin-left: 0;
+                    margin-right: 24px;
+                    background: var(--vkl-text-text-2);
+                    & img{
+                        filter: inherit;
+                    }
+                    @media #{$lg,$md,$xs}{
+                        margin-left: 0;
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+            &-title{
+                color: var(--vkl-text-text-black);
+            }
+            &-desc{
+                color: var(--vkl-text-text-3);
+            }
+        }
+    }
 }
 
 .vkl-work-bg-shape {
@@ -197,5 +313,11 @@
     padding-right: 22px;
     @media #{$lg,$md,$xs}{
         padding-right: 0;
+    }
+}
+
+.vkl-benifate-thumb4{
+    @media #{$md}{
+        text-align: center;
     }
 }

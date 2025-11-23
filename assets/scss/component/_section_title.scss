@@ -62,5 +62,18 @@
             line-height: 70px;
         }
     }
+    &-2{
+        & .sub-title{
+            background: var(--vkl-bg-bg-2);
+            color: var(--vkl-text-text-black);
+        }
+        & .title{
+            color: var(--vkl-text-text-black);
+        }
+        & .desc{
+            font-size: var(--vkl-font-size-font-s18);
+            line-height: var(--vkl-specing-height26);
+        }
+    }
     
 }

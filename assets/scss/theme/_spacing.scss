@@ -61,6 +61,13 @@
     }
 }
 
+// margin top
+.mt-40{
+    @media #{$md,$xs}{
+        margin-top: 0;
+    }
+}
+
 // margin right
 
 .mr-26{
