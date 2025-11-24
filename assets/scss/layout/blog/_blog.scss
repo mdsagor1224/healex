@@ -102,13 +102,13 @@
             }
         }
     }
-}
-
-.vkl-blog-item-thumb{
-    &-6{
-        img {
-            height: 300px !important;
-            object-fit: cover;
+    &-3{
+        & .vl-clip-anim{
+            & img{
+                height: 300px !important;
+                object-fit: cover;
+            }
         }
     }
 }
+

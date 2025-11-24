@@ -32,6 +32,14 @@
         font-size: var(--vkl-font-size-font-s18);
         line-height: var(--vkl-specing-height26);
     }
+    &-3{
+        background: var(--vkl-text-text-black);
+        padding: 50px;
+        margin-right: 104px;
+        @media #{$lg,$md,$xs}{
+            margin-right: 0;
+        }
+    }
 }
 
 .vkl-cta-from-area{
@@ -61,5 +69,34 @@
         position: absolute;
         right: 8px;
         top: 8px;
+        &-2{
+            right: 4px;
+            top: 4px;
+        }
     }
+    &-2{
+        width: 370px;
+        float: right;
+        @media #{$lg,$md,$xs}{
+            float: inherit;
+        }
+        @media #{$xs}{
+            width: 100%;
+        }
+        & input{
+            border-radius: 88px;
+            border: 1px solid transparent;
+        }
+    }
+    &-3{
+        & input{
+            border-radius: 88px;
+        }
+    }
+}
+
+.border-top-area {
+    border-top: 1px solid var(--vkl-border-border-4);
+    margin-top: 18px;
+    margin-bottom: 48px;
 }

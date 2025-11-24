@@ -103,7 +103,58 @@
             }
         }
     }
+    &-3{
+        padding: 24px;
+        .vkl-team-item{
+            &-content{
+                position: relative;
+                background: transparent;
+                padding: 0;
+                border-radius: 16px;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                text-align: inherit;
+                display: flex;
+                justify-content: space-between;
+                margin-top: 24px;
+                padding-top: 24px;
+                border-top: 1px solid rgba(19, 44, 18, 0.10);
+                border-radius: 0;
+            }
+            &-thumb{
+                height: 222px;
+                width: 222px;
+                border-radius: 50%;
+                margin: 0 auto;
+            }
+        }
+        &:hover{
+            .vkl-team-item{
+                &-content{
+                   background: transparent; 
+                }
+                &-social-3{
+                    & ul{
+                        transform: translateY(-186px) translateX(4px);
+                        transition: .3s;
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+                &-title{
+                    color: var(--vkl-text-text-black);
+                }
+                &-desc{
+                    color: var(--vkl-text-text-3);
+                }
+            }
+        }
+    }
 }
+
+
+.vkl-team-item-title
 
 
 .vkl-team-item-social ul li{
@@ -161,7 +212,6 @@
     top: -170px;
     z-index: 1;
     right: 0;
-    
     @media #{$lg,$md,$xs}{
         position: relative;
         margin-top: 30px;
@@ -192,6 +242,14 @@
         top: inherit;
         @media #{$lg,$md,$xs}{
             position: absolute;
+        }
+    }
+    &-4{
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        @media #{$lg,$md,$xs}{
+            transform: translateY(0);
         }
     }
 }
@@ -229,5 +287,61 @@
         background: rgba(255, 255, 255, 0.10);
         backdrop-filter: blur(2px);
         color: var(--vkl-text-text-white);
+    }
+    &-4{
+        left: -90px;
+        position: absolute;
+        @media #{$lg,$md,$xs}{
+            left: inherit;
+            position: relative;
+        }
+    }
+}
+
+.vl-review-button-next.vl-review-button-4 {
+    left: auto;
+    right: -90px;
+    @media #{$lg,$md,$xs}{
+        right: inherit;
+        position: relative;
+    }
+}
+
+// team social area 3 
+
+.vkl-team-item-social{
+    &-3{
+        & ul{
+            position: absolute;
+            transform: translateY(-186px) translateX(56px);
+            transition: .3s;
+            opacity: 0;
+            visibility: hidden;
+            & li{
+                & a{
+                    background: var(--vkl-bg-bg-2);
+                    height: 36px;
+                    width: 36px;
+                    display: grid;
+                    place-content: center;
+                    border-radius: 50px;
+                    color: var(--vkl-text-text-black);
+                    transition: .3s;
+                    margin-bottom: 10px;
+                    &:hover{
+                        background: var(--vkl-text-text-1);
+                        transition: .3s;
+                    }
+                }
+            }
+        }
+        & .share-icon{
+            height: 40px;
+            width: 40px;
+            border-radius: 50px;
+            background: var(--vkl-text-text-1);
+            display: grid;
+            place-content: center;
+        }
     }
 }

@@ -64,6 +64,78 @@
             }
         }
     }
+    &-3{
+        padding: 0;
+        & .vkl-service-item{
+            &-content{
+                padding: 24px;
+                padding-bottom: 51px;
+            }
+            &-title{
+                @media #{$md,$xs}{
+                    font-size: var(--vkl-font-size-font-s20);
+                }
+            }
+            &-icon{
+                display: inline-block;
+                background: var(--vkl-bg-bg-2);
+                height: 70px;
+                width: 70px;
+                border-radius: 50px;
+                display: inline-block;
+                line-height: 70px;
+                text-align: center;
+                transition: .3s;
+                position: absolute;
+                right: 24px;
+                top: 132px;
+                z-index: 1;
+                @media #{$md}{
+                    top: 156px;
+                }
+                @media #{$xs}{
+                    top: 165px;
+                }
+            }
+            &-arrow{
+                & a{
+                    height: 70px;
+                    width: 70px;
+                    display: grid;
+                    place-content: center;
+                    background: var(--vkl-bg-bg-1);
+                    transition: .3s;
+                    border-radius: 50px;
+                    position: absolute;
+                    left: 20px;
+                    bottom: 20px;
+                    z-index: 3;
+                    transition: .3s;
+                    &:hover{
+                        background: var(--vkl-text-text-1);
+                        transition: .3s;
+                        transform: translateY(-4px);
+                    }
+                }
+            }
+            &-thumb{
+                border-radius: 0;
+                & img{
+                    height: 350px;
+                }
+            }   
+        }
+
+        &:hover{
+            & .vkl-service-item{
+                &-icon{
+                    transition: .3s;
+                    background: var(--vkl-text-text-1);
+                    transform: rotateY(-180deg);
+                }
+            }
+        }
+    }
 }
 
 // service item 2 
@@ -177,5 +249,24 @@
                 border-radius: 50%;
             }
         }
+    }
+}
+
+
+.vkl-service-wrap-text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    &-desc{
+        color: var(--vkl-text-text-3);
+        font-size: var(--vkl-font-size-font-s18);
+        line-height: var(--vkl-specing-height18);
+        font-weight: var(--vkl-weight-medium);
+    }
+    &-link{
+        color: var(--vkl-text-text-2);
+        text-decoration: underline;
+        font-weight: var(--vkl-weight-semibold);
     }
 }

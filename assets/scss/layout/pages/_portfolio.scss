@@ -321,3 +321,17 @@
         text-align: center;
     }
 }
+
+// appointment style 3 
+
+.vkl-appointment-content-wrap {
+    margin-left: 65px;
+    @media #{$lg,$md,$xs}{
+        margin-left: 0;
+    }
+}
+
+.vkl-appont-thumb-left {
+    position: absolute;
+    bottom: 0;
+}

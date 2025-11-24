@@ -320,6 +320,19 @@
     }
 }
 
+.vkl-bg-2 {
+    @media #{$lg,$md,$xs}{
+        padding: 24px;
+    }
+}
+.vkl-bg-2{
+    .vl-header-action-item{
+        color: var(--vkl-text-text-black);
+        border: 1px solid var(--vkl-text-text-black);
+    }
+}
+
+
 
 // stiky header
 .header-sticky {
@@ -340,9 +353,17 @@
             padding: 0;
         }
     }
+    .vkl-bg-2 {
+        @media #{$lg,$md,$xs}{
+            padding: 0;
+        }
+    }
     &.vl-header-area{
         @media #{$xxl}{
             padding: 0;
+        }
+        &-2{
+            background: var(--vkl-bg-bg-2);
         }
     }
 
