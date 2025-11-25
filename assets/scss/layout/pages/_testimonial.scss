@@ -109,6 +109,26 @@
             }
         }
     }
+    &-4{
+        background: var(--vkl-bg-bg-1);
+        padding: 32px;
+        border-radius: 8px;
+        & .vkl-testimonial-item{
+            &-starrevieew{
+                & ul{
+                    & li{
+                        background: var(--vkl-bg-bg-2);
+                        height: 28px;
+                        width: 28px;
+                        line-height: 28px;
+                        border-radius: 3px;
+                        text-align: center;
+                        margin-right: 2px;
+                    }
+                }
+            }
+        }
+    }
 }
 
 .vkl-testimonial-quote{
@@ -128,3 +148,82 @@
         margin-bottom: 30px;
     }
 }
+
+// single testimonial counter
+
+.vkl-counterbox-flex{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+.vkl-single-test-counter{
+    margin-bottom: 60px;
+    @media #{$lg,$md,$xs}{
+        margin-bottom: 30px;
+    }
+    & .vkl-counterbox{
+        &-number{
+            font-size: var(--vkl-font-size-font-s44);
+            line-height: var(--vkl-specing-height44);
+            color: var(--vkl-text-text-black);
+        }
+        &-desc{
+            font-size: var(--vkl-font-size-font-s18);
+            line-height: var(--vkl-specing-height18);
+            color: var(--vkl-text-text-3);
+            padding-top: 18px;
+        }
+    }
+}
+
+
+// testimonial expand gallery 
+
+ .expand-container {
+    width:1320px;
+    display: flex;
+    padding: 0 20px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    }
+
+.slide {
+height: 496px;
+border-radius: 7px;
+margin: 10px;
+cursor: pointer;
+color: #fff;
+flex: 1;
+background-size: cover !important;
+background-position: center;
+background-repeat: no-repeat; 
+position: relative;
+background: var(--vkl-bg-bg-1);
+overflow: hidden;
+transition: .5s;
+
+}
+.slide .expand-slide-img {
+    height: 370px;
+    object-fit: cover;
+    width:100%;
+}
+
+
+.expand-slide-ic-box {
+    opacity: 0;
+    visibility: hidden;
+    left: -100%;
+    top: 0;
+}
+
+.slide.active .expand-slide-ic-box{
+    opacity: 1;
+    visibility:visible;
+    left: 0;
+}
+.slide.active {
+flex: 2;
+}
+

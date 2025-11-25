@@ -229,6 +229,43 @@
   }
 }
 
+// btn style 4 
+
+.vkl-primary-btn-4{
+    background: var(--vkl-text-text-1);
+    font-size: var(--vkl-font-size-font-s18);
+    line-height: var(--vkl-specing-height18);
+    font-weight: var(--vkl-weight-semibold);
+    padding: 18px;
+    display: inline-block;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: .3s;
+    text-align: center;
+    &::after{
+        position: absolute;
+        content: "";
+        left: 0;
+        bottom: 0;
+        height: 10%;
+        width: 100%;
+        background: var(--vkl-text-text-black);
+        z-index: -1;
+        transition: .3s;
+    }
+    &:hover{
+        color: var(--vkl-text-text-white);
+        transition: .3s;
+        transform: translateY(-3px);
+        &::after{
+            height: 100%;
+            transition: .3s;
+        }
+    }
+}
+
 
 
 

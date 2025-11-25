@@ -320,12 +320,12 @@
     }
 }
 
-.vkl-bg-2 {
+.vvkl-bg-2 {
     @media #{$lg,$md,$xs}{
         padding: 24px;
     }
 }
-.vkl-bg-2{
+.vvkl-bg-2{
     .vl-header-action-item{
         color: var(--vkl-text-text-black);
         border: 1px solid var(--vkl-text-text-black);

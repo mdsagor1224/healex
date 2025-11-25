@@ -255,7 +255,111 @@
             }
         }
     }
+    &-style-6{
+        border: 1px solid rgba(19, 44, 18, 0.10);
+        padding: 32px;
+        display: block;
+        text-align: center;
+        position: relative;
+        z-index: 1;
+        @media #{$md,$xs}{
+            padding: 15px;
+        }
+        & .vkl-work-item{
+            &-icon{
+                text-align: center;
+                & span{
+                    display: inline-block;
+                    margin-right: 0;
+                    background: var(--vkl-bg-bg-1);
+                    & img{
+                        filter: inherit;
+                    }
+                }
+            }
+            &-title{
+                padding-top: 32px;
+                color: var(--vkl-text-text-black);
+            }
+            &-desc{
+                color: var(--vkl-text-text-3);
+                padding-bottom: 24px;
+            }
+        }
+        & .vkl-lern-more{
+            color: var(--vkl-text-text-black);
+            font-weight: var(--vkl-weight-semibold);
+            line-height: var(--vkl-specing-height18);
+            & span{
+                display: inline-block;
+                transform: rotate(-45deg);
+                transition: .3s;
+                margin-left: 2px;
+            }
+            &:hover{
+                color: var(--vkl-text-text-1);
+                & span{
+                    transform: rotate(0);
+                    transition: .3s;
+                }
+            }
+        }
+        &::after{
+            border-radius: 8px;
+            opacity: 0.85;
+            background:#4CAE47;
+        }
+        & .vkl-ser-thumb-6 {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            transform: scale(.9);
+            transition: .3s;
+            opacity: 0;
+            & img {
+                width: 100%;
+            }
+        }
+        &:hover{
+            background: var(--vkl-bg-bg-2);
+            & .vkl-work-item{
+                &-title{
+                    color: var(--vkl-text-text-white);
+                    &:hover{
+                        color: var(--vkl-text-text-1);
+                    }
+                }
+                &-desc{
+                    color: rgba(255, 255, 255, 0.90);
+                }
+            }
+            & .vkl-lern-more{
+                color: var(--vkl-text-text-white);
+                &:hover{
+                    color: var(--vkl-text-text-1);
+                    transition: .3s;
+                }
+            }
+            & .vkl-ser-thumb-6 {
+                transform: scale(1);
+                transition: .3s;
+                opacity: 1;
+            }
+        }
+    }
 }
+
+
+
+
+
+
+
+
+
 
 .vkl-work-bg-shape {
     position: absolute;
