@@ -8,150 +8,97 @@
 <body>
     
  <!-- Expanding Gallery -->
-            <div class="expand-container">
-               <!-- single item -->
-               <div class="slide">
-                  <img class="expand-slide-img" src="assets/img/service/ca-expand-gallery3.1.png" alt="">
-                  <div class="expand-slide-ic-box">
-                     <div class="ca-expand-ic">
-                        <span><img src="assets/img/icon/ca-expand-ic3.1.svg" alt=""></span>
-                     </div>
-                     <h2 class="ca-expand-title"><a href="#">Supply Chain Management</a></h2>
-                     <p>From freight forwarding & customs brokerage to warehousing solutions and supply chain management, our expertise ensures that your logistics operations are seamless and efficient.</p>
-                  </div>
-               </div>
-               <!-- single item -->
-               <div class="slide">
-                  <img class="expand-slide-img" src="assets/img/service/ca-expand-gallery3.2.png" alt="">
-                  <div class="expand-slide-ic-box">
-                     <div class="ca-expand-ic">
-                        <span><img src="assets/img/icon/ca-expand-ic3.1.svg" alt=""></span>
-                     </div>
-                     <h2 class="ca-expand-title"><a href="#">Supply Chain Management</a></h2>
-                     <p>From freight forwarding & customs brokerage to warehousing solutions and supply chain management, our expertise ensures that your logistics operations are seamless and efficient.</p>
-                  </div>
-               </div>
-               <!-- single item -->
-               <div class="slide">
-                  <img class="expand-slide-img" src="assets/img/service/ca-expand-gallery3.3.png" alt="">
-                  <div class="expand-slide-ic-box">
-                     <div class="ca-expand-ic">
-                        <span><img src="assets/img/icon/ca-expand-ic3.1.svg" alt=""></span>
-                     </div>
-                     <h2 class="ca-expand-title"><a href="#">Supply Chain Management</a></h2>
-                     <p>From freight forwarding & customs brokerage to warehousing solutions and supply chain management, our expertise ensures that your logistics operations are seamless and efficient.</p>
-                  </div>
-               </div>
-               <!-- single item -->
-               <div class="slide active">
-                  <img class="expand-slide-img" src="assets/img/service/ca-expand-gallery3.1.png" alt="">
-                  <div class="expand-slide-ic-box">
-                     <div class="ca-expand-ic">
-                        <span><img src="assets/img/icon/ca-expand-ic3.1.svg" alt=""></span>
-                     </div>
-                     <h2 class="ca-expand-title"><a href="#">Supply Chain Management</a></h2>
-                     <p>From freight forwarding & customs brokerage to warehousing solutions and supply chain management, our expertise ensures that your logistics operations are seamless and efficient.</p>
-                  </div>
-               </div>
-               <!-- single item -->
-               <div class="slide">
-                  <img class="expand-slide-img" src="assets/img/service/ca-expand-gallery3.2.png" alt="">
-                  <div class="expand-slide-ic-box">
-                     <div class="ca-expand-ic">
-                        <span><img src="assets/img/icon/ca-expand-ic3.1.svg" alt=""></span>
-                     </div>
-                     <h2 class="ca-expand-title"><a href="#">Supply Chain Management</a></h2>
-                     <p>From freight forwarding & customs brokerage to warehousing solutions and supply chain management, our expertise ensures that your logistics operations are seamless and efficient.</p>
-                  </div>
-               </div>
-            </div>
+<div class="ba-container">
+    <div class="ba-wrapper">
+        <img src="assets/img/blog/vl-blog-1.1.png" class="ba-img ba-before">
+        <img src="assets/img/blog/vl-blog-1.2.png" class="ba-img ba-before">
+        <div class="ba-handle">
+            <span class="ba-icon">⟷</span>
+        </div>
+    </div>
+</div>
+
     
 <style>
- .expand-container {
-    width:1320px;
-    display: flex;
-    padding: 0 20px;
+.ba-container {
+    max-width: 600px;
     margin: 0 auto;
-    margin-bottom: 30px;
-    }
-
-.slide {
-height: 370px;
-border-radius: 7px;
-margin: 10px;
-cursor: pointer;
-color: #fff;
-flex: 1;
-background-size: cover !important;
-background-position: center;
-background-repeat: no-repeat; 
-position: relative;
-background: #0E47A1;
-overflow: hidden;
-transition: .5s;
-
-}
-.slide .expand-slide-img {
-    height: 370px;
-    object-fit: cover;
-    width:100%;
+    position: relative;
 }
 
-.slide h3 {
-position: absolute;
-font-size: 24px;
-bottom: 20px;
-left: 20px;
-margin: 0;
-opacity: 0;
+.ba-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 12px;
 }
-.expand-slide-ic-box {
-    opacity: 0;
-    visibility: hidden;
-    left: -100%;
+
+.ba-img {
+    width: 100%;
+    display: block;
+    pointer-events: none;
+}
+
+.ba-after {
+    position: absolute;
     top: 0;
+    left: 0;
+    width: 50%; /* Starting split */
+    height: 100%;
+    overflow: hidden;
+    clip-path: inset(0 50% 0 0);
+    transition: clip-path 0.1s linear;
 }
 
-.slide.active .expand-slide-ic-box{
-    opacity: 1;
-    visibility:visible;
-    left: 0;
+.ba-handle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    transform: translate(-50%, -50%);
+    background: #FFD43B;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: ew-resize;
+    z-index: 10;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    font-weight: bold;
 }
-.slide.active {
-flex: 2;
+
+.ba-icon {
+    font-size: 22px;
 }
 
 </style>
 
 <script>
-    // js
-// const panels = document.querySelectorAll('.panel')
+ const wrapper = document.querySelector(".ba-wrapper");
+const afterImg = document.querySelector(".ba-after");
+const handle = document.querySelector(".ba-handle");
 
-// panels.forEach(panel => {
-//     panel.addEventListener('click', () =>{
-//         removeActiveClasses()
-//         panel.classList.add('active')
-//     })
-// })
+let dragging = false;
 
+handle.addEventListener("mousedown", () => dragging = true);
+document.addEventListener("mouseup", () => dragging = false);
 
-// function removeActiveClasses(){
-//     panels.forEach(panel =>{
-//         panel.classList.remove('active')
-//     })
-// }
+document.addEventListener("mousemove", function (e) {
+    if (!dragging) return;
 
-// Expand gallery
-    const slides = document.querySelectorAll('.slide');
-    let active = document.querySelector('.slide.active');
-  
-    slides.forEach((slide) => {
-    slide.onmouseover = () => {
-        active.classList.remove('active');
-        active = slide;
-        slide.classList.add('active');
-    }
-    });
+    let rect = wrapper.getBoundingClientRect();
+    let x = e.clientX - rect.left;
+
+    if (x < 0) x = 0;
+    if (x > rect.width) x = rect.width;
+
+    let percent = (x / rect.width) * 100;
+
+    afterImg.style.clipPath = `inset(0 ${100 - percent}% 0 0)`;
+    handle.style.left = `${percent}%`;
+});
+
 
 </script>
 

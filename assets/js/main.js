@@ -203,7 +203,15 @@
 	}, 2000);
 
 	setTimeout(function() {
-		document.getElementById("myOdometer6").innerHTML = 13;
+		document.getElementById("myOdometer6").innerHTML = 10;
+	}, 2000);
+
+	setTimeout(function() {
+		document.getElementById("myOdometer7").innerHTML = 99;
+	}, 2000);
+
+	setTimeout(function() {
+		document.getElementById("myOdometer8").innerHTML = 12;
 	}, 2000);
 
 	/* ================================

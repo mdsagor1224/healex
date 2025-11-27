@@ -75,5 +75,11 @@
             line-height: var(--vkl-specing-height26);
         }
     }
+    &-3{
+        margin-right: 105px;
+        @media #{$lg,$md,$xs}{
+            margin-right: 0;
+        }
+    }
     
 }

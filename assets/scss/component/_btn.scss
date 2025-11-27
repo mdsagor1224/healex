@@ -65,6 +65,23 @@
             }
         }
     }
+    &-5{
+        border-radius: 52px;
+        & span{
+            transform: rotate(-45deg);
+            transition: .3s;
+            display: inline-block;
+        }
+        &:hover{
+            &::after{
+                border-radius: 52px;
+            }
+            & span{
+                transform: rotate(0);
+                transition: .3s;
+            }
+        }
+    }
 }
 
 .vl-header-btn{

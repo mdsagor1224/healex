@@ -64,3 +64,19 @@
         }
     }
 }
+
+// counter style 3 
+
+.vkl-counter-area-3{
+    & .vkl-counter{
+        margin-bottom: 50px;
+        margin-right: 0;
+        padding-right: 0;
+        &:last-child{
+            margin-bottom: 0;
+        }
+        &:after{
+            background: transparent;
+        }
+    }
+}

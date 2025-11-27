@@ -77,7 +77,19 @@
             transition: .3s;
         }
     }
+    &-2{
+        & .vkl-appointment-flex{
+            &-title{
+                color: var(--vkl-text-text-white);
+            }
+            &-number{
+                color: var(--vkl-text-text-1);
+            }
+        }
+    }
 }
+
+
 
 .vkl-appointment-menulist{
     & a{
@@ -98,6 +110,15 @@
             color: var(--vkl-text-text-2);
         }
     }
+    &-2{
+        & a{
+            color: rgba(255, 255, 255, 0.90);
+            &:hover{
+                color: var(--vkl-text-text-1);
+                transition: .3s;
+            }
+        }
+    }     
 }
 
 .vkl-banner-shape2{
@@ -127,4 +148,30 @@
 
 .vkl-banner-thumb4{
     margin-top: -285px;
+}
+
+// banner style 3 
+
+.vkl-banner-thumb-3 {
+    position: absolute;
+    right: 0;
+    top:200px;
+    & img {
+        height: 800px;
+    }
+}
+
+.vkl-banner-thumb-3-sm{
+    position: absolute;
+    left: 46%;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    @media #{$xxl}{
+        left: 30%;
+    }
+}
+
+.vkl-banner-content-wrap-4{
+    margin-right: 50px;
 }
