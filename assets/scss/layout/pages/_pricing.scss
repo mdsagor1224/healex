@@ -9,6 +9,9 @@
     border: 1px solid rgba(19, 44, 18, 0.10); 
     padding: 32px; 
     transition: .3s;
+    @media #{$md,$xs}{
+        padding: 20px;
+    }
     &-title{
         font-size: var(--vkl-font-size-font-s24);
         line-height: var(--vkl-specing-height24);

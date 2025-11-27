@@ -5,16 +5,19 @@
 /*----------------------------------------*/
 
 .vl-faqs2{
+    margin-left: 20px;
+    @media #{$lg,$md,$xs}{
+        margin-left: 0;
+    }
     & .vl-accordion-item{
         position: relative;
         z-index: 1;
         margin-bottom: 32px;
-
         border-radius: 8px;
         border: 1px solid #C5CEC7;
         background: var(--vkl-text-text-2);
         & .vl-accordion-button{
-            color: var(--vkl-text-text-6);
+            color: var(--vkl-text-text-white);
             font-size: var(--vkl-font-size-font-s20);
             line-height: var(--vkl-specing-height20);
             font-weight: var(--vkl-weight-regular);
@@ -35,23 +38,22 @@
                 padding: 20px 22px;
                 border-radius: 8px;
                 height: 64px;
+                color: var(--vkl-text-text-black);
+                @media #{$xs}{
+                    height: 100%;
+                }
                 span.vl-faqarrow {
                     position: absolute;
                     right: 32px;
                     top: 24px;
-                    background: var(--vkl-text-theme-color-2);
                     color: var(--vkl-text-text-6);
-                    height: 48px;
-                    width: 48px;
-                    line-height: 48px;
                     text-align: center;
                     border-radius: 50px;
                     font-size: 24px;
-                    line-height: 53px;
                     transition: .3s;
-                   transform: rotate(0);
-                   @media #{$xs}{
-                    right: 6px;
+                    transform: rotate(0);
+                    @media #{$xs}{
+                        right: 6px;
                     }
                 }
             }
@@ -59,7 +61,7 @@
                 position: absolute;
                 right: 32px;
                 top: 24px;
-                color: var(--vkl-text-text-1);
+                color: var(--vkl-text-text-white);
                 text-align: center;
                 border-radius: 50px;
                 font-size: 24px;
@@ -74,7 +76,7 @@
             padding-left: 20px;
             padding-right: 20px;
             padding-bottom: 20px;
-            color: var(--vkl-text-text-7);
+            color: var(--vkl-text-text-white);
             font-size: var(--vkl-font-size-font-s18);
             line-height: var(--vkl-specing-height28);
             font-weight: var(--vkl-weight-medium);

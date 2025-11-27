@@ -129,6 +129,9 @@
             }
         }
     }
+    &-5{
+        padding: inherit;
+    }
 }
 
 .vkl-testimonial-quote{
@@ -155,6 +158,9 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
+    @media #{$xs}{
+        display: block;
+    }
 }
 
 .vkl-single-test-counter{
@@ -176,54 +182,3 @@
         }
     }
 }
-
-
-// testimonial expand gallery 
-
- .expand-container {
-    width:1320px;
-    display: flex;
-    padding: 0 20px;
-    margin: 0 auto;
-    margin-bottom: 30px;
-    }
-
-.slide {
-height: 496px;
-border-radius: 7px;
-margin: 10px;
-cursor: pointer;
-color: #fff;
-flex: 1;
-background-size: cover !important;
-background-position: center;
-background-repeat: no-repeat; 
-position: relative;
-background: var(--vkl-bg-bg-1);
-overflow: hidden;
-transition: .5s;
-
-}
-.slide .expand-slide-img {
-    height: 370px;
-    object-fit: cover;
-    width:100%;
-}
-
-
-.expand-slide-ic-box {
-    opacity: 0;
-    visibility: hidden;
-    left: -100%;
-    top: 0;
-}
-
-.slide.active .expand-slide-ic-box{
-    opacity: 1;
-    visibility:visible;
-    left: 0;
-}
-.slide.active {
-flex: 2;
-}
-

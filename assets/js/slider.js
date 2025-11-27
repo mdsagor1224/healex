@@ -160,14 +160,14 @@ if ($('.vlServiceActive3').length) {
     const vlServiceActive3 = new Swiper('.vlServiceActive3', {
         slidesPerView: 1,
         spaceBetween: 30,
-		    loop:true,
-        keyboard: {
-            enabled: true,
-        },
-        autoplay: {
-          delay: 2500,
-          disableOnInteraction: false,
-        },
+		    // loop:true,
+        // keyboard: {
+        //     enabled: true,
+        // },
+        // autoplay: {
+        //   delay: 2500,
+        //   disableOnInteraction: false,
+        // },
         navigation: {
             nextEl: ".vl-review-button-next",
             prevEl: ".vl-review-button-prev",
