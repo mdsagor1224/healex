@@ -57,6 +57,16 @@
             height: 360px !important;
         }
     }
+    &-11{
+        & img{
+            height: 612px !important;
+        }
+    }
+    &-12{
+        & img{
+            height: 380px !important;
+        }
+    }
 }
 
 
@@ -73,5 +83,12 @@
     }
     &-desc{
         color: rgba(255, 255, 255, 0.90);
+    }
+}
+
+.vkl-about-wrap-6{
+    margin-right: 22px;
+    @media #{$lg,$md,$xs}{
+        margin-right: 0;
     }
 }

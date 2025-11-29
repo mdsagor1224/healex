@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="assets/css/plugins/twentytwenty.css">
 </head>
 <body>
     
  <!-- Expanding Gallery -->
-<div class="ba-container">
+<!-- <div class="ba-container">
     <div class="ba-wrapper">
         <img src="assets/img/blog/vl-blog-1.1.png" class="ba-img ba-before">
         <img src="assets/img/blog/vl-blog-1.2.png" class="ba-img ba-before">
@@ -16,8 +17,10 @@
             <span class="ba-icon">⟷</span>
         </div>
     </div>
-</div>
+</div> -->
 
+<!-- <img src="assets/img/rehabilitation/after/vkl-after-thumb-4.1.webp" alt=""> -->
+<img src="assets/img/rehabilitation/after/vkl-after-thumb-4.2.webp" alt="">
     
 <style>
 .ba-container {
@@ -74,33 +77,15 @@
 
 </style>
 
+<script src="assets/js/plugins/jquery-3.7.1.min.js"></script>
+<script src="assets/js/plugins/jquery.twentytwenty.js"></script>
+<script src="assets/js/plugins/jquery.event.move.js"></script>
+
 <script>
- const wrapper = document.querySelector(".ba-wrapper");
-const afterImg = document.querySelector(".ba-after");
-const handle = document.querySelector(".ba-handle");
-
-let dragging = false;
-
-handle.addEventListener("mousedown", () => dragging = true);
-document.addEventListener("mouseup", () => dragging = false);
-
-document.addEventListener("mousemove", function (e) {
-    if (!dragging) return;
-
-    let rect = wrapper.getBoundingClientRect();
-    let x = e.clientX - rect.left;
-
-    if (x < 0) x = 0;
-    if (x > rect.width) x = rect.width;
-
-    let percent = (x / rect.width) * 100;
-
-    afterImg.style.clipPath = `inset(0 ${100 - percent}% 0 0)`;
-    handle.style.left = `${percent}%`;
+    				        $(window).on("load", function(){
+    $(".twentytwenty-container[data-orientation!='vertical']").twentytwenty({default_offset_pct: 0.5});
+    $(".twentytwenty-container[data-orientation='vertical']").twentytwenty({default_offset_pct: 0.3, orientation: 'vertical'});
 });
-
-
 </script>
-
 </body>
 </html>

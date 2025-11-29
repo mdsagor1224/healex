@@ -1,6 +1,10 @@
 (function($){
     "use strict";
 
+
+
+
+
 	// Expand gallery
     const slides = document.querySelectorAll('.slide');
     let active = document.querySelector('.slide.active');
@@ -59,6 +63,8 @@
         $("#vl-header-sticky").addClass("header-sticky");
       }
     });
+
+
 	/* ================================
         mobile menu 
     ================================ */
@@ -106,6 +112,8 @@
 		speed: 0.2,
 		});
 	}
+
+
 	/* ================================
         Mouse Cursor Animation Js Start
     ================================ */
@@ -223,6 +231,7 @@
       }, 200);
     
     });
+
 
 
 })(jQuery);

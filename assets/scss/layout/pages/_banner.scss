@@ -87,6 +87,16 @@
             }
         }
     }
+    &-6{
+        & .vkl-appointment-flex{
+            &-title{
+                color: var(--vkl-text-text-white);
+            }
+            &-number{
+                color: var(--vkl-text-text-1);
+            }
+        }
+    }
 }
 
 
@@ -118,8 +128,21 @@
                 transition: .3s;
             }
         }
-    }     
+    }
+    &-6{
+        & a{
+            border-right: 1px solid var(--vkl-text-text-white);
+        }
+    }
 }
+
+.vkl-appointment-content{
+    &-6{
+
+    }
+}
+
+
 
 .vkl-banner-shape2{
     position: absolute;
@@ -174,4 +197,13 @@
 
 .vkl-banner-content-wrap-4{
     margin-right: 50px;
+}
+
+.vkl-hero-content{
+    &-6{
+        padding-right: 70px;
+        @media #{$lg,$md,$xs}{
+            padding-right: 0;
+        }
+    }
 }

@@ -131,6 +131,42 @@
     }
     &-5{
         padding: inherit;
+        & .vkl-testimonial-item{
+            &-starrevieew{
+                & ul{
+                    & li{
+                        & i{
+                            background: var(--vkl-text-text-white);
+                            height: 28px;
+                            width: 28px;
+                            line-height: 28px;
+                            border-radius: 2px;
+                            text-align: center;
+                            margin-right: 4px;
+                        }
+                    }
+                }
+            }
+            &-desc{
+                color: rgba(255, 255, 255, 0.90);
+            }
+            &-authbox{
+                &-title{
+                    color: var(--vkl-text-text-white);
+                    &:hover{
+                        color: var(--vkl-text-text-1);
+                    }
+                }
+                &-position{
+                    color: rgba(255, 255, 255, 0.90);
+                }
+            }
+        }
+        & .vkl-testimonial-quote{
+            & img{
+                filter: brightness(0) invert(1);
+            }
+        }
     }
 }
 
@@ -181,4 +217,11 @@
             padding-top: 18px;
         }
     }
+}
+
+// testimonial 5 
+.vkl-testimonail-5{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
