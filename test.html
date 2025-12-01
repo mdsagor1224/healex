@@ -4,88 +4,135 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="assets/css/plugins/twentytwenty.css">
+
+    <style>
+        .timeline {
+  padding: 80px 20px;
+  background: #f1f6f3;
+}
+
+.timeline-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Center horizontal line */
+.timeline-grid::before {
+  content: "";
+  grid-column: 1 / -1;
+  height: 2px;
+  background: #c9cfc7;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.timeline-item {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+
+  grid-template-rows: auto auto auto auto;
+  padding: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Dot (always at center row) */
+.timeline-item .dot {
+  width: 12px;
+  height: 12px;
+  background: #1c3b2f;
+  border-radius: 50%;
+  border: 3px solid #f1f6f3;
+  grid-row: 3;
+  z-index: 3;
+}
+
+/* Number */
+.timeline-item .number {
+  font-size: 28px;
+  font-weight: bold;
+  color: #1c3b2f;
+  line-height: 1;
+}
+
+/* TOP item layout */
+.timeline-item.top {
+  grid-template-rows: auto auto auto auto;
+}
+.timeline-item.top .title { grid-row: 1; }
+.timeline-item.top .desc { grid-row: 2; }
+.timeline-item.top .number { grid-row: 4; }
+
+/* BOTTOM item layout */
+.timeline-item.bottom {
+  grid-template-rows: auto auto auto auto;
+}
+.timeline-item.bottom .dot { grid-row: 1; }
+.timeline-item.bottom .number { grid-row: 2; }
+.timeline-item.bottom .title { grid-row: 3; }
+.timeline-item.bottom .desc { grid-row: 4; }
+
+/* Responsive grid */
+@media (max-width: 992px) {
+  .timeline-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .timeline-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-grid::before {
+    display: none;
+  }
+}
+
+    </style>
 </head>
 <body>
-    
- <!-- Expanding Gallery -->
-<!-- <div class="ba-container">
-    <div class="ba-wrapper">
-        <img src="assets/img/blog/vl-blog-1.1.png" class="ba-img ba-before">
-        <img src="assets/img/blog/vl-blog-1.2.png" class="ba-img ba-before">
-        <div class="ba-handle">
-            <span class="ba-icon">⟷</span>
-        </div>
+    <section class="timeline">
+  <div class="timeline-grid">
+
+    <div class="timeline-item top">
+      <h3 class="title">Customized Treatment Plan</h3>
+      <p class="desc">Based on your consultation, we design a massage therapy plan that targets your specific areas.</p>
+      <div class="number">02</div>
+      <div class="dot"></div>
     </div>
-</div> -->
 
-<!-- <img src="assets/img/rehabilitation/after/vkl-after-thumb-4.1.webp" alt=""> -->
-<img src="assets/img/rehabilitation/after/vkl-after-thumb-4.2.webp" alt="">
-    
-<style>
-.ba-container {
-    max-width: 600px;
-    margin: 0 auto;
-    position: relative;
-}
+    <div class="timeline-item bottom">
+      <div class="dot"></div>
+      <div class="number">01</div>
+      <h3 class="title">Initial Consultation</h3>
+      <p class="desc">We start by understanding your unique needs, health history, and goals.</p>
+    </div>
 
-.ba-wrapper {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    border-radius: 12px;
-}
+    <div class="timeline-item top">
+      <h3 class="title">Use of Quality Products</h3>
+      <p class="desc">We use organic oils & natural aromatherapy products.</p>
+      <div class="number">04</div>
+      <div class="dot"></div>
+    </div>
 
-.ba-img {
-    width: 100%;
-    display: block;
-    pointer-events: none;
-}
+    <div class="timeline-item bottom">
+      <div class="dot"></div>
+      <div class="number">03</div>
+      <h3 class="title">Skilled Therapeutic Massage</h3>
+      <p class="desc">Our certified therapists use advanced techniques.</p>
+    </div>
 
-.ba-after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50%; /* Starting split */
-    height: 100%;
-    overflow: hidden;
-    clip-path: inset(0 50% 0 0);
-    transition: clip-path 0.1s linear;
-}
+  </div>
+</section>
 
-.ba-handle {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 50px;
-    height: 50px;
-    transform: translate(-50%, -50%);
-    background: #FFD43B;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: ew-resize;
-    z-index: 10;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    font-weight: bold;
-}
-
-.ba-icon {
-    font-size: 22px;
-}
-
-</style>
-
-<script src="assets/js/plugins/jquery-3.7.1.min.js"></script>
-<script src="assets/js/plugins/jquery.twentytwenty.js"></script>
-<script src="assets/js/plugins/jquery.event.move.js"></script>
-
-<script>
-    				        $(window).on("load", function(){
-    $(".twentytwenty-container[data-orientation!='vertical']").twentytwenty({default_offset_pct: 0.5});
-    $(".twentytwenty-container[data-orientation='vertical']").twentytwenty({default_offset_pct: 0.3, orientation: 'vertical'});
-});
-</script>
 </body>
 </html>

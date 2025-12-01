@@ -3,6 +3,10 @@
 
 
 
+	$(window).on("load", function(){
+		$(".twentytwenty-container[data-orientation!='vertical']").twentytwenty({default_offset_pct: 0.5});
+		$(".twentytwenty-container[data-orientation='vertical']").twentytwenty({default_offset_pct: 0.3, orientation: 'vertical'});
+	});
 
 
 	// Expand gallery
@@ -64,6 +68,8 @@
       }
     });
 
+
+	
 
 	/* ================================
         mobile menu 
@@ -220,6 +226,14 @@
 
 	setTimeout(function() {
 		document.getElementById("myOdometer8").innerHTML = 12;
+	}, 2000);
+
+	setTimeout(function() {
+		document.getElementById("myOdometer9").innerHTML = 15;
+	}, 2000);
+
+	setTimeout(function() {
+		document.getElementById("myOdometer10").innerHTML = 15;
 	}, 2000);
 
 	/* ================================

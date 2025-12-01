@@ -320,8 +320,45 @@
             transition: .3s;
         }
     }
+    &-2{
+        background: var(--vkl-text-text-2);
+        color: var(--vkl-text-text-white);
+        & span{
+            & img{
+                margin-top: -4px;
+                filter: brightness(0) invert(1);
+                transition: .3s;
+            }
+        }
+        &::after{
+            background: var(--vkl-text-text-1);
+        }
+        &:hover{
+            color: var(--vkl-text-text-black);
+            & span{
+                & img{
+                    filter: inherit;
+                    transition: .3s;
+                }
+            }
+        }
+    }
+    &-3{
+        &::after{
+            background: var(--vkl-text-text-white);
+        }
+        &:hover{
+            color: var(--vkl-text-text-black);
+        }
+    }
 }
 
+// newslater btn 4
+.vkl-newslater-form-btn4 {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+}
 
 
 

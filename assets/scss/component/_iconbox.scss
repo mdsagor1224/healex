@@ -21,6 +21,12 @@
             transition: .3s;
         }
     }
+    &-4{
+        & a{
+            color:var(--vkl-text-text-white);
+            background: rgba(255, 255, 255, 0.10);
+        }
+    }
 }
 
 // vkl check icon box   
@@ -83,6 +89,64 @@
                 margin-bottom: 0;
             }
         }
+    }
+    &-4{
+        border-top: 1px solid rgba(255, 255, 255, 0.10);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+        margin-top: 20px;
+        padding-bottom: 20px;
+        padding-top: 20px;
+        & ul{
+            & li{
+                & a{
+                    color: rgba(255, 255, 255, 0.90);
+
+
+                }
+            }
+        }
+    }
+}
+
+.vkl-about-icon-box5{
+    display: flex;
+    align-items: center;
+    @media #{$xs}{
+        margin-top: 16px;
+    }
+    & .icon{
+        & span{
+            height: 54px;
+            width: 54px;
+            border-radius: 50px;
+            background: var(--vkl-text-text-2);
+            display: inline-block;
+            line-height: 54px;
+            text-align: center;
+            margin-right: 10px;
+        }
+    }
+    & .num-heading{
+        font-size: var(--vkl-font-size-font-s18);
+        line-height: var(--vkl-specing-height18);
+        color: var(--vkl-text-text-3);
+        font-weight: var(--vkl-weight-medium);
+    }
+    & .number{
+        padding-top:18px;
+        color: var(--vkl-text-text-black);
+        font-size: var(--vkl-font-size-font-s18);
+        line-height: var(--vkl-specing-height18);
+        font-weight: var(--vkl-weight-regular);
+        font-family: var(--vkl-family-font1);
+        display: block;
+    }
+}
+
+.vkl-about-btn-box-flex-5{
+    display: flex;
+    @media #{$xs}{
+        display: block;
     }
 }
 

@@ -403,6 +403,155 @@
             background: transparent;
         }
     }
+    &-style-9{
+        padding: 24px;
+        border: inherit;
+        border-radius: 8px;
+        background: transparent;
+        border: 1px solid #CFD8D2;
+        margin-bottom: 20px;
+        & .vkl-work-item{
+            &-title{
+                color: var(--vkl-text-text-black);
+            }
+            &-desc{
+                color: var(--vkl-text-text-3);
+                padding-top: 16px;
+            }
+            &-icon{
+                & span{
+                    background: var(--vkl-bg-bg-2);
+                    height: 32px;
+                    width: 32px;
+                    line-height: 32px;
+                    text-align: center;
+                    border-radius: 50px;
+                    display: inline-block;
+                    color: var(--vkl-text-text-black);
+                }
+            }
+        }
+        &:hover{
+            & .vkl-work-item-icon{
+                & span{
+                    background: var(--vkl-text-text-2);
+                    color: var(--vkl-text-text-white);
+                    transform: rotate(0);
+                }
+            }
+        }
+        &::after{
+            background: var(--vkl-bg-bg-2);
+        }
+    }
+    &-style-10{
+        border: 1px solid transparent;
+        padding: 32px;
+        display: block;
+        position: relative;
+        z-index: 1;
+        background: var(--vkl-bg-bg-1);
+        transition: .3s;
+        @media #{$md,$xs}{
+            padding: 15px;
+        }
+        & .vkl-work-item{
+            &-icon{
+                text-align: center;
+                & span{
+                    display: inline-block;
+                    margin-right: 0;
+                    background: var(--vkl-bg-bg-1);
+                    & img{
+                        filter: inherit;
+                    }
+                }
+            }
+            &-title{
+                padding-top: 16px;
+                color: var(--vkl-text-text-black);
+                font-size: var(--vkl-font-size-font-s24);
+                line-height: var(--vkl-specing-height32);
+            }
+            &-desc{
+                color: var(--vkl-text-text-3);
+                padding-bottom: 24px;
+            }
+        }
+        & .vkl-lern-more{
+            color: var(--vkl-text-text-black);
+            font-weight: var(--vkl-weight-semibold);
+            line-height: var(--vkl-specing-height18);
+            & span{
+                display: inline-block;
+                transform: rotate(-45deg);
+                transition: .3s;
+                margin-left: 2px;
+            }
+            &:hover{
+                color: var(--vkl-text-text-1);
+                & span{
+                    transform: rotate(0);
+                    transition: .3s;
+                }
+            }
+        }
+        &::after{
+            border-radius: 8px;
+            opacity: 0.85;
+            background:#132C12;
+        }
+        & .vkl-ser-thumb-6 {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            transform: scale(.9);
+            transition: .3s;
+            opacity: 0;
+            & img {
+                width: 100%;
+            }
+        }
+        &:hover{
+            background: var(--vkl-bg-bg-2);
+            & .vkl-work-item{
+                &-title{
+                    color: var(--vkl-text-text-white);
+                    &:hover{
+                        color: var(--vkl-text-text-1);
+                    }
+                }
+                &-desc{
+                    color: rgba(255, 255, 255, 0.90);
+                }
+            }
+            & .vkl-lern-more{
+                color: var(--vkl-text-text-white);
+                &:hover{
+                    color: var(--vkl-text-text-1);
+                    transition: .3s;
+                }
+            }
+            & .vkl-ser-thumb-6 {
+                transform: scale(1);
+                transition: .3s;
+                opacity: 1;
+            }
+            & .vkl-blog-item-tags{
+                & a{
+                    color: var(--vkl-text-text-white);
+                    & img{
+                        filter: brightness(0) invert(1);
+                        transition: .3s;
+                    }
+                }
+            }
+        }
+    }
+
 }
 
 
@@ -581,3 +730,82 @@
     }
 }
 
+
+// work style 7 
+
+.vl-work-content-wrap{
+    &-7{
+        margin-right: 20px;
+        @media #{$lg,$md,$xs}{
+            margin-right: 0;
+        }
+    }
+}
+
+// work style 6 
+
+.vkl-work-wrap-item{
+    position: relative;
+    z-index: 1;
+    @media #{$lg,$md,$xs}{
+        margin-bottom: 30px;
+    }
+    &-number{
+        font-size: var(--vkl-font-size-font-s44);
+        line-height: var(--vkl-specing-height44);
+        color: var(--vkl-text-text-black);
+    }
+    &-title{
+        font-size: var(--vkl-font-size-font-s20);
+        line-height: var(--vkl-font-size-font-s20);
+        color: var(--vkl-text-text-black);
+        transition: .3s;
+        &:hover{
+            color: var(--vkl-text-text-2);
+            transition: .3s;
+        }
+    }
+    &-desc{
+        font-size: var(--vkl-font-size-font-s18);
+        line-height: var(--vkl-specing-height26);
+        color: var(--vkl-text-text-3);
+    }
+}
+
+.vkl-work-wrapper-6 {
+    position: relative;
+    z-index: 1;
+    &::after {
+        position: absolute;
+        content: "";
+        left: 0;
+        top: 50%;
+        height: 1px;
+        width: 100%;
+        background: var(--vkl-text-text-black);
+        @media #{$lg,$md,$xs}{
+            background: transparent;
+        }
+    }
+}
+
+.vkl-timeline-shape {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -10px;
+}
+
+.class-one{
+    margin-top: 65px;
+    padding-top: 65px;
+    @media #{$lg,$md,$xs}{
+        margin-top: 0;
+        padding-top: 0;
+    }
+}
+.vkl-timeline-shape.vkl-timeline-shape-2 {
+    bottom: -75px;
+    top: inherit;
+    transform: rotate(180deg);
+}

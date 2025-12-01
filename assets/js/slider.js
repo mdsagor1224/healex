@@ -190,5 +190,46 @@ if ($('.vlServiceActive3').length) {
 }
 
 
+/*----------------------------------------*/
+/*  06. Service Slider (Home five)
+/*----------------------------------------*/
+
+if ($('.vlServicetActive5').length) {
+    const vlServicetActive5 = new Swiper('.vlServicetActive5', {
+        slidesPerView: 4,
+        spaceBetween: 30,
+		    loop:true,
+        speed: 3000,
+        keyboard: {
+            enabled: true,
+        },
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          0: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 2,
+          },
+          992: {
+            slidesPerView: 3,
+          },
+          1200: {
+            slidesPerView: 4,
+          }
+      },
+    });
+}
+
+
+
+
 
 })(jQuery);

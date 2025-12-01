@@ -4,7 +4,6 @@
 /*  7.3 Service css
 /*----------------------------------------*/
 
-
 .vkl-service-item{
     padding: 24px;
     border: 1px solid var(--vkl-border-border-3);
@@ -152,6 +151,40 @@
                 }
                 & .para{
                     color: rgba(255, 255, 255, 0.90) !important;
+                }
+            }
+        }
+        &-7{
+            padding: 24px;
+            .vkl-service-item{
+                &-content{
+                    padding: 0;
+                }
+                &-thumb{
+                    border-radius: 8px;
+                    height: 270px;
+                }
+                &-icon{
+                    top: 56%;
+                    right: 44px;
+                    & span{
+                        & img{
+                            transition: .3s;
+                        }
+                    }
+                }
+            }
+            &:hover{
+                & .vkl-service-item{
+                    &-icon{
+                        background: var(--vkl-text-text-2);
+                        & span{
+                            & img{
+                                filter: brightness(0) invert(1);
+                                transition: .3s;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -339,6 +372,31 @@
                 z-index: -1;
                 border: 5px solid #2B412B;
                 border-radius: 50%;
+            }
+        }
+    }
+    &-2{
+        & .swiper-pagination-bullet {
+            opacity: 1;
+            height: 10px;
+            width: 10px;
+            background: #BAC5BC;
+            margin: 0 10px !important;
+            &-active {
+                background: #142C13;
+                position: relative;
+                z-index: 1;
+                &::after {
+                    position: absolute;
+                    content: "";
+                    height: 24px;
+                    width: 24px;
+                    left: -7px;
+                    top: -7px;
+                    z-index: -1;
+                    border: 5px solid #BAC5BC;
+                    border-radius: 50%;
+                }
             }
         }
     }
