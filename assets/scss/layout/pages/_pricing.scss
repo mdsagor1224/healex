@@ -50,6 +50,10 @@
         background: var(--vkl-bg-bg-1);
         transition: .3s;
     }
+    &.active{
+        border:1px solid var(--vkl-text-text-2);
+        background:var(--vkl-bg-bg-1);
+    }
 }
 
 .vkl-pricing-btn {

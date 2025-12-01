@@ -360,6 +360,57 @@
     top: 8px;
 }
 
+// primary btn 7
+
+.vkl-primary-btn-7{
+    background: var(--vkl-text-text-2);
+    border-radius: 8px;
+    padding: 17px 24px;
+    color: var(--vkl-text-text-white);
+    font-size: var(--vkl-font-size-font-s18);
+    line-height: var(--vkl-specing-height18);
+    font-weight: var(--vkl-weight-semibold);
+    transition: .3s;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    & span{
+        transform: rotate(-45deg);
+        transition: .3s;
+        display: inline-block;
+    }
+    &::after{
+        position: absolute;
+        content: "";
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background: var(--vkl-text-text-black);
+        z-index: -1;
+        border-radius: 8px;
+        transform: scaleX(0);
+        transition: .3s;
+    }
+    &:hover{
+        color: var(--vkl-text-text-white);
+        transition: .3s;
+        & span{
+            transform: rotate(0);
+            transition: .3s;
+        }
+        &::after{
+            transform: scaleX(1);
+            transition: .3s;
+        }
+    }
+    &-1{
+        background: transparent;
+        color: var(--vkl-text-text-black);
+        border: 1px solid #DCE2DD;
+    }
+}
+
 
 
 // old btn

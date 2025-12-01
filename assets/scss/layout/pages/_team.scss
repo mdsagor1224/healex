@@ -410,12 +410,16 @@
             left: inherit;
             position: relative;
         }
+        &-6{
+            background: var(--vkl-bg-bg-2);
+        }
     }
     &-5{
         background: rgba(255, 255, 255, 0.10);
         backdrop-filter: blur(2px);
         color: var(--vkl-text-text-white);
     }
+    
 }
 
 .vl-review-button-next.vl-review-button-4 {
@@ -465,3 +469,107 @@
         }
     }
 }
+
+
+// team style 7 
+
+.vkl-team-itm-7{
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    & .vkl-team-thumb{
+        height: 400px;
+        overflow: hidden;
+        transition: .3s;
+        border-radius: 8px;
+        & img{
+            transition: .3s;
+        }
+    }
+    & .vkl-team-content{
+        background: var(--vkl-bg-bg-1);
+        padding: 20px;
+        border-radius: 8px;
+        position: absolute;
+        bottom: 24px;
+        left: 24px;
+        right: 24px;
+        transition: .3s;
+        & .vkl-team-title{
+            color: var(--vkl-text-text-black);
+            font-size: var(--vkl-font-size-font-s20);
+            line-height: var(--vkl-specing-height20);
+            transition: .3s;
+        }
+        & .vkl-position{
+            color: var(--vkl-text-text-3);
+            font-size: var(--vkl-font-size-font-s18);
+            line-height: var(--vkl-specing-height18);
+            font-weight: var(--vkl-weight-medium);
+            transition: .3s;
+            padding-top: 12px;
+        }
+    }
+    & .vkl-team-item-social7{
+        position: absolute;
+        top: 33px;
+        right: 20px;
+        transform: translateX(57px);
+        opacity: 0;
+        visibility: hidden;
+        transition: .3s;
+        & ul{
+            & li{
+                margin-bottom: 10px;
+                &:last-child{
+                    margin-bottom: 0;
+                }
+                & a{
+                    background: var(--vkl-bg-bg-1);
+                    height: 50px;
+                    width: 50px;
+                    line-height: 50px;
+                    border-radius: 50px;
+                    display: inline-block;
+                    transition: .3s;
+                    color: var(--vkl-text-text-black);
+                    text-align: center;
+                   // margin-bottom: 10px;
+                    &:hover{
+                        background: var(--vkl-text-text-2);
+                        color: var(--vkl-text-text-white);
+                        transition: .3s;
+                    }
+                }
+            }
+        }
+    }
+    &:hover{
+        & .vkl-team-thumb{
+            & img{
+                transform: scale(1.1);
+                transition: .3s;
+            }
+        }
+        & .vkl-team-content{
+            background: var(--vkl-text-text-2);
+            transition: .3s;
+            transform: rotate(3deg);
+        }
+        & .vkl-team-title{
+            color: var(--vkl-text-text-white);
+            transition: .3s;
+        }
+        & .vkl-position{
+            color: rgba(255, 255, 255, 0.80);
+            transition: .3s;
+        }
+        & .vkl-team-item-social7{
+            transform: translateX(0);
+            opacity: 1;
+            visibility: visible;
+            transition: .3s;
+        }
+    }
+}
+

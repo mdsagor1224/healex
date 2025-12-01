@@ -231,3 +231,59 @@
     background-position: center;
     background-repeat: no-repeat;
 }
+
+// testimonial area 7 
+
+.vkl-testimonial-wraper-7{
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.10);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    & .vkl-testimonial-item-starrevieew{
+        & ul{
+            & li{
+                height: 28px;
+                width: 28px;
+                border-radius: 2px;
+                line-height: 28px;
+                text-align: center;
+                background: rgba(255, 255, 255, 0.10);
+                margin-right: 4px;
+            }
+        }
+    }
+    & .vkl-testimonial-thumb{
+        width: 170px;
+        margin-right: 24px;
+        & img{
+            height: 272px;
+            object-fit: cover;
+            border-radius: 8px;
+            width: 170px;
+        }
+    }
+    & .vkl-testimonial-content{
+        & .vkl-testimonial-item-desc{
+            padding-top: 16px;
+            padding-bottom: 24px;
+            color: rgba(255, 255, 255, 0.90);
+            font-size: var(--vkl-font-size-font-s18);
+            font-style: normal;
+            font-weight: var(--vkl-weight-regular);
+            line-height: var(--vkl-specing-height26); 
+        }
+    }
+    & .vkl-testimonial-item-authbox-title{
+        color: var(--vkl-text-text-white);
+        transition: .3s;
+        &:hover{
+            color: var(--vkl-text-text-1);
+            transition: .3s;
+        }
+    }
+    & .vkl-testimonial-item-authbox-position{
+        color: rgba(255, 255, 255, 0.90);
+    }
+}
+
