@@ -285,5 +285,38 @@
     & .vkl-testimonial-item-authbox-position{
         color: rgba(255, 255, 255, 0.90);
     }
+    &-9{
+        background: var(--vkl-bg-bg-1);
+        padding: 32px;
+        display: block;
+        @media #{$lg,$md,$xs}{
+            padding: 15px;
+        }
+        & .vkl-testimonial-thumb{
+            width: 100%;
+            margin-right: 0;
+        }
+        & .vkl-testimonial-item-starrevieew ul li{
+            background: var(--vkl-bg-bg-2);
+        }
+        & .vkl-testimonial-content{
+            & .vkl-testimonial-item{
+                &-desc{
+                    color: var(--vkl-text-text-3);
+                    font-size: var(--vkl-font-size-font-s24);
+                    line-height: var(--vkl-specing-height32);
+                    font-weight: var(--vkl-weight-medium);
+                }
+            }
+        }
+        & .vkl-testimonial-item-authbox-title{
+            color: var(--vkl-text-text-black);
+            & .vkl-auth-position{
+                font-size: var(--vkl-font-size-font-s18);
+                line-height: var(--vkl-specing-height26);
+                font-family: var(--vkl-family-font2);
+            }
+        }
+    }
 }
 

@@ -245,6 +245,33 @@
        padding: 32px 24px; 
        border: 1px solid #DCE2DD;
     }
+    &-9{
+        & .blog-tags6 a{
+            bottom: 16px;
+            top: auto;
+            left: auto;
+            right: 16px;
+            &:hover{
+                background: var(--vkl-text-text-1);
+                transition: .3s;
+            }
+        }
+        & .vkl-blog-item-tags a{
+            &:hover{
+                color: var(--vkl-text-text-1);
+            }
+        }
+        & .vkl-blog-item-title{
+            &:hover{
+                color: var(--vkl-text-text-1);
+            }
+        }
+        & .vkl-lern-more{
+            &:hover{
+                color: var(--vkl-text-text-1);
+            }
+        }
+    }
 
 
 
@@ -278,6 +305,14 @@
         & .vl-clip-anim{
             & img{
                 height: 362px !important;
+                object-fit: cover;
+            }
+        }
+    }
+    &-9{
+        & .vl-clip-anim{
+            & img{
+                height: 310px !important;
                 object-fit: cover;
             }
         }

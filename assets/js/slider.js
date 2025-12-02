@@ -265,38 +265,48 @@ if ($('.vlserviceactive7').length) {
 }
 
 
+/*----------------------------------------*/
+/*  02. testimonial Slider (Home 9)
+/*----------------------------------------*/
+
+if ($('.vlTestimonialActive9').length) {
+    const vlTestimonialActive9 = new Swiper('.vlTestimonialActive9', {
+        slidesPerView: 3,
+        spaceBetween: 30,
+		    loop:true,
+        keyboard: {
+            enabled: true,
+        },
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        navigation: {
+            nextEl: ".vl-review-button-next",
+            prevEl: ".vl-review-button-prev",
+        },
+        breakpoints: {
+          0: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 2,
+          },
+          992: {
+            slidesPerView: 3,
+          },
+          1200: {
+            slidesPerView:3,
+          }
+      },
+    });
+}
+
+
+
 
 })(jQuery);
 
 
 
 
- var swiper = new Swiper(".tp-project-active", {
-        slidesPerView: 4,
-        spaceBetween: 30,
-        keyboard: {
-            enabled: true,
-        },
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
-        navigation: {
-            nextEl: ".tp-swiper-team-button-next",
-            prevEl: ".tp-swiper-team-button-prev",
-        },
-        breakpoints: {
-            0: {
-              slidesPerView: 1,
-            },
-            768: {
-              slidesPerView: 2,
-            },
-            992: {
-              slidesPerView: 3,
-            },
-            1200: {
-              slidesPerView: 4,
-            }
-          },
-    });

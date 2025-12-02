@@ -216,9 +216,47 @@
             }
         }
     }
+    &-2{
+        & .content{
+                & .title{
+                    transition: .3s;
+                    color: var(--vkl-text-text-black);
+                }
+                & .para{
+                    transition: .3s;
+                    color: var(--vkl-text-text-black);
+                }
+            }
+        &::after{
+            background: var(--vkl-text-text-2);
+        }
+        &:hover{
+            & .content{
+                & .title{
+                    transition: .3s;
+                    color: var(--vkl-text-text-white);
+                }
+                & .para{
+                    transition: .3s;
+                    color: var(--vkl-text-text-white);
+                    &:hover{
+                        color: var(--vkl-text-text-1);
+                        transition: .3s;
+                    }
+                }
+            }
+           & .icon{
+                & span{
+                    background: rgba(255, 255, 255, 0.10)
+                }
+            }
+        }
+    }
 }
 
-
+// .vkl-single-iconbox.vkl-single-iconbox-2:hover .icon span {
+//     background: red;
+// }
 
 .time-section {
   padding: 40px 0;

@@ -573,3 +573,109 @@
     }
 }
 
+
+// team style 9 
+.vkl-team-itm-9{
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    & .vkl-team-thumb{
+        height: 350px;
+        overflow: hidden;
+        transition: 0.3s;
+        border-radius: 8px;
+        position: relative;
+        z-index: 1;
+        & img{
+            transition: .3s;
+            height: 350px;
+            object-fit: cover;
+        }
+    }
+    & .vkl-team-content{
+        background: var(--vkl-bg-bg-2);
+        padding: 28px 24px;
+        border-radius: 8px;
+        transition: .3s;
+        & .vkl-team-title{
+            color: var(--vkl-text-text-black);
+            font-size: var(--vkl-font-size-font-s20);
+            line-height: var(--vkl-specing-height20);
+            transition: .3s;
+        }
+        & .vkl-position{
+            color: var(--vkl-text-text-3);
+            font-size: var(--vkl-font-size-font-s18);
+            line-height: var(--vkl-specing-height18);
+            font-weight: var(--vkl-weight-medium);
+            transition: .3s;
+            padding-top: 12px;
+        }
+    }
+    & .vkl-team-item-social9{
+        position: absolute;
+        bottom: 20px;
+        text-align: center;
+        background: var(--vkl-bg-bg-2);
+        display: block;
+        padding: 8px;
+        border-radius: 8px;
+        left: 20px;
+        right: 20px;
+        transform: translateY(76px);
+        transition: .3s;
+        opacity: 0;
+        visibility: hidden;
+        & ul{
+            & li{
+                display: inline-block;
+                & a{
+                    background: var(--vkl-bg-bg-1);
+                    height: 50px;
+                    width: 50px;
+                    line-height: 50px;
+                    border-radius: 50px;
+                    display: inline-block;
+                    transition: .3s;
+                    color: var(--vkl-text-text-black);
+                    text-align: center;
+                    margin: 0 4px;
+                    &:hover{
+                        background: var(--vkl-text-text-1);
+                        transition: .3s;
+                    }
+                }
+            }
+        }
+    }
+    &:hover{
+        & .vkl-team-thumb{
+            & img{
+                transform: scale(1.1);
+                transition: .3s;
+            }
+        }
+        & .vkl-team-content{
+            background: var(--vkl-bg-bg-3);
+            transition: .3s;
+        }
+        & .vkl-team-title{
+            color: var(--vkl-text-text-white);
+            transition: .3s;
+        }
+        & .vkl-position{
+            color: rgba(255, 255, 255, 0.80);
+            transition: .3s;
+        }
+        & .vkl-team-item-social9{
+            transform: translateY(0); 
+            transition: .3s;
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
+
+
+

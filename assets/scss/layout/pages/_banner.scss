@@ -12,6 +12,25 @@
         padding-top: 230px;
         padding-bottom: 130px;
     }
+    &-7{
+        padding-top: 280px;
+        padding-bottom: 357px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+        z-index: 1;
+        &::after{
+            position: absolute;
+            content: "";
+            right: 50%;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            background: var(--vkl-bg-bg-1);
+            z-index: -1;
+            background-image: url(/assets/img/physiotherapy/banner/vkl-bg-right7.2.png);
+        }
+    }
 }
 
 // shape 
@@ -99,8 +118,6 @@
     }
 }
 
-
-
 .vkl-appointment-menulist{
     & a{
         color: var(--vkl-text-text-3);
@@ -141,8 +158,6 @@
 
     }
 }
-
-
 
 .vkl-banner-shape2{
     position: absolute;
@@ -266,5 +281,31 @@
     height: 100%;
     & img{
         height: 100%;
+    }
+}
+
+// hero content 7 
+
+.vkl-hero-content{
+    &-7{
+        padding-right: 70px;
+        @media #{$lg,$md,$xs}{
+            padding-right: 0;
+        }
+        & .vkl-section-title{
+            & .sub-title{
+                color:var(--vkl-text-text-black);
+                background: var(--vkl-bg-bg-2);
+            }
+            & .title{
+                color: var(--vkl-text-text-black);
+            }
+            & .para{
+                font-size: var(--vkl-font-size-font-s18);
+                line-height: var(--vkl-specing-height26);
+                font-weight: var(--vkl-weight-regular);
+                color: var(--vkl-text-text-black);
+            }
+        }
     }
 }
