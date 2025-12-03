@@ -82,7 +82,32 @@
             height: 510px !important;
         }
     }
+    &-16{
+        & img{
+            height: 660px !important;
+        }
+    }
+    &-17{
+        margin-left: 44px;
+        @media #{$lg,$md,$xs}{
+            margin-left: 0;
+        }
+        & img{
+            height: 680px !important;
+        }
+    }
+    &-18{
+        & img{
+            height: 306px !important;
+        }
+    }
+    &-19{
+        & img{
+            height: 484px !important;
+        }
+    }
 }
+
 
 
 .vkl-about-exp-box{
@@ -154,10 +179,27 @@
     @media #{$lg,$md,$xs}{
         width: 100%;
     }
+    &-10{
+        width: 750px;
+        @media #{$lg,$md,$xs}{
+            width: 100%;
+        }
+    }
 }
 
 
 .vkl-about-7{
     padding-top: 327px;
     margin-top: -255px;
+}
+
+
+// about style 10 
+
+.vl-about-content-wrap-10{
+    background: var(--vkl-text-text-white);
+    border-radius: 8px;
+    padding: 50px 32px;
+    position:relative;
+    z-index: 1;
 }

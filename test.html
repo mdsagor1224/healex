@@ -1,138 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <style>
-        .timeline {
-  padding: 80px 20px;
-  background: #f1f6f3;
-}
-
-.timeline-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  position: relative;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* Center horizontal line */
-.timeline-grid::before {
-  content: "";
-  grid-column: 1 / -1;
-  height: 2px;
-  background: #c9cfc7;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
-  z-index: 1;
-}
-
-.timeline-item {
-  display: grid;
-  justify-items: center;
-  align-items: center;
-  text-align: center;
-
-  grid-template-rows: auto auto auto auto;
-  padding: 20px;
-  position: relative;
-  z-index: 2;
-}
-
-/* Dot (always at center row) */
-.timeline-item .dot {
-  width: 12px;
-  height: 12px;
-  background: #1c3b2f;
-  border-radius: 50%;
-  border: 3px solid #f1f6f3;
-  grid-row: 3;
-  z-index: 3;
-}
-
-/* Number */
-.timeline-item .number {
-  font-size: 28px;
-  font-weight: bold;
-  color: #1c3b2f;
-  line-height: 1;
-}
-
-/* TOP item layout */
-.timeline-item.top {
-  grid-template-rows: auto auto auto auto;
-}
-.timeline-item.top .title { grid-row: 1; }
-.timeline-item.top .desc { grid-row: 2; }
-.timeline-item.top .number { grid-row: 4; }
-
-/* BOTTOM item layout */
-.timeline-item.bottom {
-  grid-template-rows: auto auto auto auto;
-}
-.timeline-item.bottom .dot { grid-row: 1; }
-.timeline-item.bottom .number { grid-row: 2; }
-.timeline-item.bottom .title { grid-row: 3; }
-.timeline-item.bottom .desc { grid-row: 4; }
-
-/* Responsive grid */
-@media (max-width: 992px) {
-  .timeline-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 576px) {
-  .timeline-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .timeline-grid::before {
-    display: none;
-  }
-}
-
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
+
+<style>
+  .diamond-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 80px 0;
+  }
+
+  /* Center Image */
+  .center-img {
+    grid-column: 2;
+    grid-row: 2;
+    z-index: 5;
+  }
+
+  .center-img img {
+    width: 100%;
+    border-radius: 25px;
+  }
+
+  /* TOP CARD */
+  .top-card {
+    grid-column: 2;
+    grid-row: 1;
+    transform: translateY(-40px);
+  }
+
+  /* LEFT CARD */
+  .left-card {
+    grid-column: 1;
+    grid-row: 2;
+    transform: translateX(-40px);
+  }
+
+  /* RIGHT CARD */
+  .right-card {
+    grid-column: 3;
+    grid-row: 2;
+    transform: translateX(40px);
+  }
+
+  /* BOTTOM CARD */
+  .bottom-card {
+    grid-column: 2;
+    grid-row: 3;
+    transform: translateY(40px);
+  }
+
+  /* Card styling */
+  .card {
+    background: #f0f7f2;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 5px 20px #00000015;
+    max-width: 300px;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .diamond-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .card,
+    .center-img {
+      transform: none !important;
+      grid-column: 1 !important;
+      grid-row: auto !important;
+      margin-bottom: 25px;
+    }
+  }
+</style>
+
+
 <body>
-    <section class="timeline">
-  <div class="timeline-grid">
+  <section class="diamond-section">
+    <div class="diamond-grid">
 
-    <div class="timeline-item top">
-      <h3 class="title">Customized Treatment Plan</h3>
-      <p class="desc">Based on your consultation, we design a massage therapy plan that targets your specific areas.</p>
-      <div class="number">02</div>
-      <div class="dot"></div>
+      <div class="card top-card">
+        <h3>Comprehensive Assessment</h3>
+        <p>We begin with a detailed evaluation...</p>
+      </div>
+
+      <div class="card left-card">
+        <h3>Personalized Treatment Plan</h3>
+        <p>Based on your assessment...</p>
+      </div>
+
+      <div class="center-img">
+        <img class="w-100" src="assets/img/chiropractor/about/vkl-about-thmb-2.1.webp" alt="">
+      </div>
+
+      <div class="card right-card">
+        <h3>Term Prevention Support</h3>
+        <p>We guide you with preventive care...</p>
+      </div>
+
+      <div class="card bottom-card">
+        <h3>Progress Track & Adjustments</h3>
+        <p>We continuously monitor...</p>
+      </div>
+
     </div>
+  </section>
 
-    <div class="timeline-item bottom">
-      <div class="dot"></div>
-      <div class="number">01</div>
-      <h3 class="title">Initial Consultation</h3>
-      <p class="desc">We start by understanding your unique needs, health history, and goals.</p>
-    </div>
 
-    <div class="timeline-item top">
-      <h3 class="title">Use of Quality Products</h3>
-      <p class="desc">We use organic oils & natural aromatherapy products.</p>
-      <div class="number">04</div>
-      <div class="dot"></div>
-    </div>
-
-    <div class="timeline-item bottom">
-      <div class="dot"></div>
-      <div class="number">03</div>
-      <h3 class="title">Skilled Therapeutic Massage</h3>
-      <p class="desc">Our certified therapists use advanced techniques.</p>
-    </div>
-
-  </div>
-</section>
 
 </body>
+
 </html>

@@ -303,6 +303,44 @@ if ($('.vlTestimonialActive9').length) {
 }
 
 
+/*----------------------------------------*/
+/*  05. Team Slider (Home three)
+/*----------------------------------------*/
+
+if ($('.vlTeamActive9').length) {
+    const vlTeamActive9 = new Swiper('.vlTeamActive9', {
+        slidesPerView: 1,
+        spaceBetween: 30,
+		    loop:true,
+        keyboard: {
+            enabled: true,
+        },
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        navigation: {
+            nextEl: ".vl-review-button-next",
+            prevEl: ".vl-review-button-prev",
+        },
+        breakpoints: {
+          0: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 2,
+          },
+          992: {
+            slidesPerView: 3,
+          },
+          1200: {
+            slidesPerView: 4,
+          }
+      },
+    });
+}
+
+
 
 
 })(jQuery);
