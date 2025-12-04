@@ -320,3 +320,95 @@
     }
 }
 
+
+.vkl-slider-right{
+    height: 492px;
+}
+
+.vkl-testimonial-item6{
+    background: var(--vkl-bg-bg-2);
+    padding: 44px 32px;
+    border-radius: 8px;
+    &-icon{
+        & ul{
+            & li{
+                background: var(--vkl-bg-bg-1);
+                display: inline-block;
+                height: 28px;
+                width: 28px;
+                border-radius: 2px;
+                line-height: 28px;
+                text-align: center;
+                color: var(--vkl-text-text-7);
+                margin-right: 4px;
+            }
+        }
+    }
+    &-desc{
+        padding-top: 16px;
+        font-size: var(--vkl-font-size-font-s24);
+        line-height: var(--vkl-specing-height32);
+        font-weight: var(--vkl-weight-medium);
+        color: var(--vkl-text-text-3);
+    }
+}
+
+.vkl-testimonial-sm-item6{
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    background: rgba(255, 255, 255, 0.10);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    transition: .3s;
+    &:last-child{
+        margin-bottom: 0;
+    }
+    &-thumb{
+        margin-right: 16px;
+        & img{
+            height: 68px;
+            width: 68px;
+            line-height: 68px;
+            border-radius: 50px;
+        }
+        & span{
+            height: 68px;
+            width: 68px;
+            position: relative;
+            border-radius: 50px;
+            line-height: 50px;
+            text-align: center;
+            background: #405440;
+            display: inline-block;
+            transition: .3s;
+        }
+    }
+    &-title{
+        font-size: var(--vkl-font-size-font-s20);
+        line-height: var(--vkl-specing-height20);
+        color: var(--vkl-text-text-white);
+        transition: .3s;
+    }
+    &-position{
+        padding-top: 16px;
+        font-size: var(--vkl-font-size-font-s18);
+        line-height: var(--vkl-specing-height18);
+        font-weight: var(--vkl-weight-medium);
+        color: rgba(255, 255, 255, 0.90);
+    }
+    &:hover{
+        background: var(--vkl-bg-bg-1);
+        & .vkl-testimonial-sm-item6{
+            &-title{
+                color: var(--vkl-text-text-black);
+                transition: .3s;
+            }
+            &-position{
+                color: var(--vkl-text-text-3);
+                transition: .3s;
+            }
+        }
+    }
+}

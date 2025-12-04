@@ -5,118 +5,65 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+
+  <link rel="stylesheet" href="assets/css/plugins/bootstrap.min.css">
 </head>
 
 <style>
-  .diamond-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    position: relative;
-    width: 100%;
-    max-width: 1200px;
-    margin: auto;
-    padding: 80px 0;
+  .containerr {
+    display: flex;
+    gap: 10px;
   }
 
-  /* Center Image */
-  .center-img {
-    grid-column: 2;
-    grid-row: 2;
-    z-index: 5;
+  .item {
+    flex: 1;
+    /* নরমাল অবস্থায় সব বক্স সমান */
+    background: #ccc;
+    padding: 20px;
+    transition: flex 0.3s ease;
+    /* Smooth animation */
   }
 
-  .center-img img {
-    width: 100%;
-    border-radius: 25px;
+  /* Hover করলে শুধু ওই বক্স বড় হবে */
+  .item:hover {
+    flex: 2;
+    /* এখানে flex-grow = 2 → বক্স বড় হবে */
+    background: #aaa;
   }
 
-  /* TOP CARD */
-  .top-card {
-    grid-column: 2;
-    grid-row: 1;
-    transform: translateY(-40px);
-  }
-
-  /* LEFT CARD */
-  .left-card {
-    grid-column: 1;
-    grid-row: 2;
-    transform: translateX(-40px);
-  }
-
-  /* RIGHT CARD */
-  .right-card {
-    grid-column: 3;
-    grid-row: 2;
-    transform: translateX(40px);
-  }
-
-  /* BOTTOM CARD */
-  .bottom-card {
-    grid-column: 2;
-    grid-row: 3;
-    transform: translateY(40px);
-  }
-
-  /* Card styling */
-  .card {
-    background: #f0f7f2;
-    padding: 25px;
-    border-radius: 18px;
-    box-shadow: 0 5px 20px #00000015;
-    max-width: 300px;
-  }
-
-  /* RESPONSIVE */
-  @media (max-width: 768px) {
-    .diamond-grid {
-      grid-template-columns: 1fr;
-    }
-
-    .card,
-    .center-img {
-      transform: none !important;
-      grid-column: 1 !important;
-      grid-row: auto !important;
-      margin-bottom: 25px;
-    }
+  .item-flex-2 {
+    background: red;
+    display: flex;
+    flex: 2
   }
 </style>
 
 
 <body>
-  <section class="diamond-section">
-    <div class="diamond-grid">
-
-      <div class="card top-card">
-        <h3>Comprehensive Assessment</h3>
-        <p>We begin with a detailed evaluation...</p>
+  <div class="container">
+    <div class="containerr">
+      <div class="item">
+        <div class="item-flex-2">
+          <div class="item1">1</div>
+          <div class="item2">2</div>
+        </div>
       </div>
-
-      <div class="card left-card">
-        <h3>Personalized Treatment Plan</h3>
-        <p>Based on your assessment...</p>
+      <div class="item">
+        <div class="item-wrap-flex">
+          <div class="item-content">
+            <h4 class="title">Lorem, ipsum dolor.</h4>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum rerum officiis ut asperiores.
+              Dolorem ratione, repudiandae architecto nam assumenda alias?</p>
+          </div>
+          <div class="item-thumb"><img class="w-100" src="assets/img/service/vl-service-1.1.png" alt=""></div>
+        </div>
       </div>
-
-      <div class="center-img">
-        <img class="w-100" src="assets/img/chiropractor/about/vkl-about-thmb-2.1.webp" alt="">
-      </div>
-
-      <div class="card right-card">
-        <h3>Term Prevention Support</h3>
-        <p>We guide you with preventive care...</p>
-      </div>
-
-      <div class="card bottom-card">
-        <h3>Progress Track & Adjustments</h3>
-        <p>We continuously monitor...</p>
-      </div>
-
+      <div class="item">Box 3</div>
     </div>
-  </section>
+  </div>
 
 
-
+  <script src="assets/js/plugins/bootstrap.min.js"></script>
 </body>
 
 </html>

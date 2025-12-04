@@ -31,9 +31,9 @@ if ($('.vlServicetActive').length) {
             delay: 1,
             disableOnInteraction: true,
           },
-        navigation: {
-            nextEl: ".vl-review-button-next",
-            prevEl: ".vl-review-button-prev",
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
         },
         breakpoints: {
           0: {
@@ -60,14 +60,14 @@ if ($('.vlTeamActive').length) {
     const vlTeamActive = new Swiper('.vlTeamActive', {
         slidesPerView: 4,
         spaceBetween: 30,
-		loop:true,
-        keyboard: {
-            enabled: true,
-        },
-		autoplay: {
-			delay: 2500,
-			disableOnInteraction: false,
-		},
+		    // loop:true,
+        // keyboard: {
+        //     enabled: true,
+        // },
+        // autoplay: {
+        //   delay: 2500,
+        //   disableOnInteraction: false,
+        // },
         navigation: {
             nextEl: ".vl-review-button-next",
             prevEl: ".vl-review-button-prev",
@@ -340,6 +340,54 @@ if ($('.vlTeamActive9').length) {
     });
 }
 
+
+
+ var swiper = new Swiper(".mySwiper", {
+     direction: "vertical",
+      loop: true,
+      spaceBetween: 10,
+      slidesPerView: 4,
+      freeMode: true,
+      watchSlidesProgress: true,
+    });
+    var swiper2 = new Swiper(".mySwiper2", {
+      loop: true,
+      spaceBetween: 10,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      thumbs: {
+        swiper: swiper,
+      },
+    });
+
+
+
+    // testimonial 3 
+
+        // tp-testimonial-content-active
+    var slider = new Swiper ('.tp-testimonial-content-active', {
+      slidesPerView: 1,
+      centeredSlides: true,
+      loop: true,
+      loopedSlides: 3,
+      navigation: {
+          nextEl: '.tp-room-details-slide-next',
+          prevEl: '.tp-room-details-slide-prev',
+      },
+    });
+    var thumbs = new Swiper ('.tp-testimonial-thumb-active', {
+      slidesPerView: 3,
+      spaceBetween: 10,
+      centeredSlides: false,
+      centeredSlides: true,
+      loop: true,
+      slideToClickedSlide: true,
+    });
+    
+    slider.controller.control = thumbs;
+    thumbs.controller.control = slider;
 
 
 
