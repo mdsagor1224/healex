@@ -63,6 +63,10 @@
             background: transparent;
         }
     }
+    &-2{
+        margin-right: 45px;
+        padding-right: 45px;
+    }
 }
 
 // counter style 3 
@@ -78,5 +82,16 @@
         &:after{
             background: transparent;
         }
+    }
+}
+
+.vkl-counter-area-3 {
+    @media #{$lg}{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+    @media #{$md}{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
     }
 }

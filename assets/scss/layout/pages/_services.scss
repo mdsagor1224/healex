@@ -331,6 +331,20 @@
             }
         }
     }
+    &-ab-iner{
+        background: var(--vkl-bg-bg-4);
+        transition: .3s;
+        & .vkl-service-item{
+            &-content{
+                background: var(--vkl-bg-bg-1);
+                padding: 28px 24px;
+                border-radius: 8px;
+            }
+        }
+        &:hover{
+           background: var(--vkl-bg-bg-4);
+        }
+    }
 }
 
 // service item 2 
@@ -465,6 +479,31 @@
                     top: -7px;
                     z-index: -1;
                     border: 5px solid #BAC5BC;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+    &-3{
+        & .swiper-pagination-bullet {
+            opacity: 1;
+            height: 10px;
+            width: 10px;
+            background: #ff0000;
+            margin: 0 10px !important;
+            &-active {
+                background: #0aff02;
+                position: relative;
+                z-index: 1;
+                &::after {
+                    position: absolute;
+                    content: "";
+                    height: 24px;
+                    width: 24px;
+                    left: -7px;
+                    top: -7px;
+                    z-index: -1;
+                    border: 5px solid #2e09ea;
                     border-radius: 50%;
                 }
             }
@@ -757,3 +796,4 @@
     background-size: cover;
     background-position: center;
 }
+

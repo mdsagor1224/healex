@@ -150,6 +150,9 @@
                     & img{
                         filter: inherit;
                     }
+                    &.inner-icon{
+                        background: var(--vkl-bg-bg-1);
+                    }
                 }
             }
             &-title{
@@ -165,6 +168,20 @@
         }
         &:hover{
             background: var(--vkl-bg-bg-2);
+            & .vkl-work-item{
+                &-icon{
+                    & span{
+                        &.inner-icon{
+                            background: var(--vkl-text-text-1);
+                        }
+                    }
+                }
+            }
+        }
+        &-ab-iner{
+            &:hover{
+                background: var(--vkl-bg-bg-1);
+            }
         }
     }
     &-style-4{
@@ -783,6 +800,9 @@
         width: 100%;
         border-radius: 8px;
         background: linear-gradient(1deg, #4CAE47 0.96%, rgba(31, 72, 29, 0.00) 92.52%);
+        opacity: 0;
+        transition: .3s;
+
     }
     &:hover{
         & .vkl-work-thumb img{
@@ -801,6 +821,10 @@
                 transition: .3s;
                 visibility: visible;
             }
+        }
+        &::after{
+            opacity: 1;
+            transition: .3s;
         }
     }
 }

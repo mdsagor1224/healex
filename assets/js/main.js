@@ -236,6 +236,26 @@
 		document.getElementById("myOdometer10").innerHTML = 15;
 	}, 2000);
 
+	setTimeout(function() {
+		document.getElementById("myOdometer11").innerHTML = 20;
+	}, 2000);
+
+	setTimeout(function() {
+		document.getElementById("myOdometer12").innerHTML = 12;
+	}, 2000);
+
+	setTimeout(function() {
+		document.getElementById("myOdometer13").innerHTML = 99;
+	}, 2000);
+
+	setTimeout(function() {
+		document.getElementById("myOdometer14").innerHTML = 30;
+	}, 2000);
+
+	setTimeout(function() {
+		document.getElementById("myOdometer15").innerHTML = 10;
+	}, 2000);
+
 	/* ================================
 		preloader
 	================================ */

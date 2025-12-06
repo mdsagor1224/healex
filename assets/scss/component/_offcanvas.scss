@@ -6,6 +6,10 @@
     padding: 7px 11px;
     border-radius: 8px;
     color: var(--vkl-text-text-white);
+    &-2{
+        border: 1px solid var(--vkl-text-text-black);
+        color: var(--vkl-text-text-black);
+    }
 }
 
 .vl-offcanvas {

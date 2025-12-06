@@ -162,6 +162,7 @@
     transition: .3s;
     position: relative;
     z-index: 1;
+    overflow: hidden;
     &::after{
         position: absolute;
         content: "";

@@ -17,6 +17,14 @@
     position: relative;
 }
 
+
+.vkl-header-padding{
+    @media #{$lg,$md,$xs}{
+        padding: 20px;
+    }
+}
+
+
 // header top 
 
 .vl-header-top-area{
@@ -112,6 +120,12 @@
     }
 }
 
+
+.vl-lg-header {
+    @media #{$lg,$md,$xs}{
+        padding: 20px;
+    }
+}
 
 
 .vl-logo {

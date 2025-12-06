@@ -412,3 +412,92 @@
         }
     }
 }
+
+.vkl-testimonial-item-3{
+    &-icon{
+        & ul{
+            & li{
+                display: inline-block;
+                background: var(--vkl-bg-bg-2);
+                height: 28px;
+                width: 28px;
+                border-radius:2px;
+                line-height: 28px;
+                color: var(--vkl-text-text-6);
+                margin-right: 4px;
+            }
+        }
+    }
+    &-content{
+        padding: 0 150px;
+    }
+    &-desc{
+        color: var(--vkl-text-text-3);
+        font-size: var(--vkl-font-size-font-s24);
+        line-height: var(--vkl-specing-height32);
+        font-weight: var(--vkl-weight-medium);
+        transition: .3s;
+    }
+}
+
+.vkl-testimonial-sm{
+    height: 96px;
+    width: 96px;
+    background: var(--vkl-text-text-1);
+    display: flex;
+    align-items: center;
+    border-radius: 88px;
+    padding: 8px;
+    padding-right: 24px;
+    &-thumb{
+
+    }
+    &-title{
+        display: none;
+    }
+}
+
+
+.tp-testimonial-thumb-active .swiper-slide img {
+    -moz-transform: scale(0.8);
+    -o-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+    width: 100px;
+    transition: 0.3s;
+}
+
+.tp-testimonial-thumb-active .swiper-slide.swiper-slide-active img {
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+.tp-testimonial-item{
+    & .tp-testimonial-text{
+        font-size: var(--vkl-font-size-font-s24);
+        line-height: var(--vkl-specing-height32);
+        font-weight: var(--vkl-weight-medium);
+        color: var(--vkl-text-text-black);
+    }
+}
+
+.tp-testimonial-author{
+    &-name{
+        font-size: var(--vkl-font-size-font-s24);
+        line-height: var(--vkl-specing-height32);
+        font-weight: var(--vkl-weight-regular);
+        color: var(--vkl-text-text-black);
+        transition: .3s;
+    }
+}
+
+.tp-testimonial-item.pl-60.pr-60 {
+    @media #{$lg,$md,$xs}{
+        padding-left: 0;
+        padding-right: 0;
+    }
+}

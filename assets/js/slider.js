@@ -60,14 +60,14 @@ if ($('.vlTeamActive').length) {
     const vlTeamActive = new Swiper('.vlTeamActive', {
         slidesPerView: 4,
         spaceBetween: 30,
-		    // loop:true,
-        // keyboard: {
-        //     enabled: true,
-        // },
-        // autoplay: {
-        //   delay: 2500,
-        //   disableOnInteraction: false,
-        // },
+		    loop:true,
+        keyboard: {
+            enabled: true,
+        },
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
         navigation: {
             nextEl: ".vl-review-button-next",
             prevEl: ".vl-review-button-prev",
@@ -88,6 +88,82 @@ if ($('.vlTeamActive').length) {
       },
     });
 }
+
+/*----------------------------------------*/
+/*  05. Team Slider (Home One)
+/*----------------------------------------*/
+
+if ($('.vlTeamActive5').length) {
+    const vlTeamActive5 = new Swiper('.vlTeamActive5', {
+        slidesPerView: 4,
+        spaceBetween: 30,
+		    loop:true,
+        keyboard: {
+            enabled: true,
+        },
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        navigation: {
+            nextEl: ".vl-review-button-next",
+            prevEl: ".vl-review-button-prev",
+        },
+        breakpoints: {
+          0: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 2,
+          },
+          992: {
+            slidesPerView: 4,
+          },
+          1200: {
+            slidesPerView: 4,
+          }
+      },
+    });
+}
+
+
+/*----------------------------------------*/
+/*  07. Team Slider (Home One)
+/*----------------------------------------*/
+
+if ($('.vlTeamActive7').length) {
+    const vlTeamActive7 = new Swiper('.vlTeamActive7', {
+        slidesPerView: 4,
+        spaceBetween: 30,
+		    loop:true,
+        keyboard: {
+            enabled: true,
+        },
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        navigation: {
+            nextEl: ".vl-review-button-next",
+            prevEl: ".vl-review-button-prev",
+        },
+        breakpoints: {
+          0: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 2,
+          },
+          992: {
+            slidesPerView: 4,
+          },
+          1200: {
+            slidesPerView: 4,
+          }
+      },
+    });
+}
+
 
 /*----------------------------------------*/
 /*  03. Testimonial Slider (Home One)
@@ -341,6 +417,44 @@ if ($('.vlTeamActive9').length) {
 }
 
 
+/*----------------------------------------*/
+/*  01. Brand Slider (Home One)
+/*----------------------------------------*/
+
+if ($('.vlBrandActive').length) {
+    const vlBrandActive = new Swiper('.vlBrandActive', {
+        slidesPerView: 4,
+        spaceBetween: 30,
+		    loop:true,
+        speed: 4000,
+        keyboard: {
+            enabled: true,
+        },
+		    autoplay: {
+            delay: 1,
+            disableOnInteraction: true,
+          },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          0: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 2,
+          },
+          992: {
+            slidesPerView: 3,
+          },
+          1200: {
+            slidesPerView: 4,
+          }
+      },
+    });
+}
+
 
  var swiper = new Swiper(".mySwiper", {
      direction: "vertical",
@@ -365,8 +479,6 @@ if ($('.vlTeamActive9').length) {
 
 
     // testimonial 3 
-
-        // tp-testimonial-content-active
     var slider = new Swiper ('.tp-testimonial-content-active', {
       slidesPerView: 1,
       centeredSlides: true,

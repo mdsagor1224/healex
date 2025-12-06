@@ -64,6 +64,16 @@
                 transition: .3s;
             }
         }
+        &-1{
+            background: transparent;
+            border: 1px solid #DCE2DD;
+            &::after{
+                background: var(--vkl-text-text-1);
+            }
+            &:hover{
+                color: var(--vkl-text-text-black);
+            }
+        }
     }
     &-5{
         border-radius: 52px;
